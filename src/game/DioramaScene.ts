@@ -715,9 +715,9 @@ export class DioramaScene {
       const deltaX = clientX - this.previousMousePosition.x;
       const deltaY = clientY - this.previousMousePosition.y;
 
-      // Keep camera in comfortable viewing arc so room is always open and visible
-      this.cameraTargetRotation.y = Math.max(-1.15, Math.min(0.35, this.cameraTargetRotation.y + deltaX * 0.006));
-      this.cameraTargetRotation.x = Math.max(0.12, Math.min(0.65, this.cameraTargetRotation.x + deltaY * 0.006));
+      // Free, continuous 360-degree rotation without any blocking or stalling
+      this.cameraTargetRotation.y += deltaX * 0.007;
+      this.cameraTargetRotation.x = Math.max(0.06, Math.min(0.72, this.cameraTargetRotation.x + deltaY * 0.006));
 
       this.previousMousePosition = { x: clientX, y: clientY };
     };
