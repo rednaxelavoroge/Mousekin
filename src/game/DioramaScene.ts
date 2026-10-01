@@ -101,7 +101,7 @@ export class DioramaScene {
     this.scene.add(this.clock.group);
 
     // 6. Add 3D Character (Little Mouse)
-    this.character = new Character3D();
+    this.character = new Character3D(this.camera);
     this.character.group.position.set(-0.2, 0, 0.5);
     this.character.group.rotation.y = -0.15;
     this.scene.add(this.character.group);
@@ -139,16 +139,44 @@ export class DioramaScene {
     trim.position.y = -0.22;
     this.roomGroup.add(trim);
 
-    // B. Back Wall (Soft warm wallpaper)
-    const backWallGeom = new THREE.BoxGeometry(6.4, 4.5, 0.25);
+    // B. Back Wall with Real Window Opening (See-through from both inside and outside)
     const wallMat = new THREE.MeshStandardMaterial({
-      color: 0xf4ecd8,
+      color: 0xf4ecd8, // Cozy warm cream interior
       roughness: 0.8
     });
-    const backWall = new THREE.Mesh(backWallGeom, wallMat);
-    backWall.position.set(0, 2.1, -3.1);
-    backWall.receiveShadow = true;
-    this.roomGroup.add(backWall);
+
+    const exteriorMat = new THREE.MeshStandardMaterial({
+      color: 0xa87550, // Warm terracotta / cottage exterior
+      roughness: 0.7
+    });
+
+    // 1. Left section of back wall
+    const wallLeft = new THREE.Mesh(new THREE.BoxGeometry(1.6, 4.5, 0.25), wallMat);
+    wallLeft.position.set(-2.4, 2.25, -3.1);
+    wallLeft.receiveShadow = true;
+    wallLeft.castShadow = true;
+    this.roomGroup.add(wallLeft);
+
+    // 2. Right section of back wall
+    const wallRight = new THREE.Mesh(new THREE.BoxGeometry(2.4, 4.5, 0.25), wallMat);
+    wallRight.position.set(2.0, 2.25, -3.1);
+    wallRight.receiveShadow = true;
+    wallRight.castShadow = true;
+    this.roomGroup.add(wallRight);
+
+    // 3. Bottom section under window
+    const wallBottom = new THREE.Mesh(new THREE.BoxGeometry(2.4, 1.1, 0.25), wallMat);
+    wallBottom.position.set(-0.4, 0.55, -3.1);
+    wallBottom.receiveShadow = true;
+    wallBottom.castShadow = true;
+    this.roomGroup.add(wallBottom);
+
+    // 4. Top section above window
+    const wallTop = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.6, 0.25), wallMat);
+    wallTop.position.set(-0.4, 4.2, -3.1);
+    wallTop.receiveShadow = true;
+    wallTop.castShadow = true;
+    this.roomGroup.add(wallTop);
 
     // C. Left Wall (with wallpaper)
     const leftWallGeom = new THREE.BoxGeometry(0.25, 4.5, 6.4);
@@ -284,14 +312,54 @@ export class DioramaScene {
     rightBar.position.set(1.15, 0, 0);
     this.windowGroup.add(rightBar);
 
-    // Window Viewport / Sky (Parallax view into the world)
+    // 1. Transparent Glass Pane (Double-sided, clear view from inside and outside)
+    const glassGeom = new THREE.PlaneGeometry(2.2, 2.6);
+    const glassMat = new THREE.MeshStandardMaterial({
+      color: 0x88ccff,
+      transparent: true,
+      opacity: 0.18,
+      roughness: 0.1,
+      metalness: 0.1,
+      side: THREE.DoubleSide
+    });
+    const glass = new THREE.Mesh(glassGeom, glassMat);
+    glass.position.set(0, 0, 0);
+    this.windowGroup.add(glass);
+
+    // 2. Interior & Exterior Window Sills
+    const intSill = new THREE.Mesh(new THREE.BoxGeometry(2.5, 0.12, 0.35), frameMat);
+    intSill.position.set(0, -1.35, 0.15);
+    this.windowGroup.add(intSill);
+
+    const extSill = new THREE.Mesh(new THREE.BoxGeometry(2.5, 0.12, 0.35), frameMat);
+    extSill.position.set(0, -1.35, -0.15);
+    this.windowGroup.add(extSill);
+
+    // Outdoor Exterior Frame on the outside of the wall
+    const extFrameMat = new THREE.MeshStandardMaterial({ color: 0x5a2d10, roughness: 0.6 });
+    const extTop = new THREE.Mesh(new THREE.BoxGeometry(2.5, 0.15, 0.15), extFrameMat);
+    extTop.position.set(0, 1.35, -0.15);
+    this.windowGroup.add(extTop);
+
+    const extLeft = new THREE.Mesh(new THREE.BoxGeometry(0.15, 2.7, 0.15), extFrameMat);
+    extLeft.position.set(-1.15, 0, -0.15);
+    this.windowGroup.add(extLeft);
+
+    const extRight = new THREE.Mesh(new THREE.BoxGeometry(0.15, 2.7, 0.15), extFrameMat);
+    extRight.position.set(1.15, 0, -0.15);
+    this.windowGroup.add(extRight);
+
+    // 3. Panoramic Outdoor Sky & Clocktown Backdrop (floating outdoors in the distance)
     const skyTex = new THREE.TextureLoader().load('/assets/images/ios111.jpg');
     skyTex.colorSpace = THREE.SRGBColorSpace;
-    const skyGeom = new THREE.PlaneGeometry(2.2, 2.6);
-    const skyMat = new THREE.MeshBasicMaterial({ map: skyTex });
+    const skyGeom = new THREE.PlaneGeometry(16, 11);
+    const skyMat = new THREE.MeshBasicMaterial({
+      map: skyTex,
+      side: THREE.DoubleSide
+    });
     this.windowSkyMesh = new THREE.Mesh(skyGeom, skyMat);
-    this.windowSkyMesh.position.set(0, 0, 0.04);
-    this.windowGroup.add(this.windowSkyMesh);
+    this.windowSkyMesh.position.set(-0.4, 2.8, -7.5);
+    this.scene.add(this.windowSkyMesh);
 
     // Cross mullion bars
     const barV = new THREE.Mesh(new THREE.BoxGeometry(0.06, 2.5, 0.06), frameMat);
@@ -465,6 +533,9 @@ export class DioramaScene {
 
   public render(time: number) {
     this.updateCameraTransform();
+    if (this.windowSkyMesh) {
+      this.windowSkyMesh.visible = this.camera.position.z >= -3.5;
+    }
     this.clock.update(time);
     this.character.update(time);
     this.seasonParticles.update(time);
