@@ -26,11 +26,14 @@ export class GameController {
     this.setupStoryHooks();
   }
 
+  private chapterBar: HTMLElement | null = null;
+  private hintBadge: HTMLElement | null = null;
+
   private buildHUD() {
     this.hudContainer.innerHTML = '';
     this.hudContainer.className = 'absolute inset-0 pointer-events-none flex flex-col justify-between p-4 z-20 select-none';
 
-    // Top Bar: Scene Title, Season Pills, Language & Sound controls
+    // Top Bar: Scene Title, Chapter Pills, Language & Sound controls
     const topBar = document.createElement('div');
     topBar.className = 'w-full flex items-center justify-between gap-3 flex-wrap';
 
@@ -42,31 +45,33 @@ export class GameController {
       window.dispatchEvent(new CustomEvent('close-game'));
     };
 
-    // Seasons Pill Bar
-    const seasonBar = document.createElement('div');
-    seasonBar.className = 'pointer-events-auto bg-black/50 backdrop-blur-md border border-amber-500/20 rounded-full p-1 flex items-center gap-1 shadow-xl';
+    // Chapter Navigator Pills Bar
+    this.chapterBar = document.createElement('div');
+    this.chapterBar.className = 'pointer-events-auto bg-black/60 backdrop-blur-md border border-amber-500/30 rounded-full p-1 flex items-center gap-1 shadow-2xl overflow-x-auto max-w-[90vw] sm:max-w-none';
 
-    const seasons: { id: Season; label: string; icon: string }[] = [
-      { id: 'summer', label: 'Лето', icon: '☀️' },
-      { id: 'winter', label: 'Зима', icon: '❄️' },
-      { id: 'autumn', label: 'Осень', icon: '🍂' },
-      { id: 'spring', label: 'Весна', icon: '🌸' }
+    const chapters = [
+      { idx: 0, label: 'Спальня', icon: '🛏️' },
+      { idx: 1, label: 'Зима', icon: '❄️' },
+      { idx: 2, label: 'Осень', icon: '🍂' },
+      { idx: 3, label: 'Полёт', icon: '☁️' },
+      { idx: 4, label: 'Времясипед', icon: '🚲' },
+      { idx: 5, label: 'Финал', icon: '🐌' }
     ];
 
-    seasons.forEach(s => {
+    chapters.forEach(ch => {
       const btn = document.createElement('button');
-      btn.className = `season-btn px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 transition-all ${
-        this.currentSeason === s.id
-          ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-md'
+      btn.className = `chapter-btn px-2.5 sm:px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 transition-all ${
+        this.currentSceneIndex === ch.idx
+          ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-md scale-105'
           : 'text-amber-100/70 hover:text-white hover:bg-white/10'
       }`;
-      btn.dataset.season = s.id;
-      btn.innerHTML = `<span>${s.icon}</span> <span class="hidden sm:inline">${s.label}</span>`;
+      btn.dataset.chapter = ch.idx.toString();
+      btn.innerHTML = `<span>${ch.icon}</span> <span class="hidden md:inline">${ch.label}</span>`;
       btn.onclick = () => {
-        this.changeSeason(s.id);
-        this.soundManager.playSpringWinding();
+        this.currentSceneIndex = ch.idx;
+        this.applyScene(ch.idx);
       };
-      seasonBar.appendChild(btn);
+      this.chapterBar!.appendChild(btn);
     });
 
     // Right Controls: Audio & Language
@@ -109,22 +114,22 @@ export class GameController {
     rightControls.appendChild(langBtn);
 
     topBar.appendChild(backBtn);
-    topBar.appendChild(seasonBar);
+    topBar.appendChild(this.chapterBar);
     topBar.appendChild(rightControls);
     this.hudContainer.appendChild(topBar);
 
     // 3D Orbit helper hint in corner
-    const hintBadge = document.createElement('div');
-    hintBadge.className = 'pointer-events-none self-end bg-black/40 backdrop-blur-md border border-white/10 text-white/70 text-[11px] px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md mt-2';
-    hintBadge.innerHTML = `<span>🔄</span> <span>Тяни пальцем или мышью, чтобы вращать 3D комнату</span>`;
-    this.hudContainer.appendChild(hintBadge);
+    this.hintBadge = document.createElement('div');
+    this.hintBadge.className = 'pointer-events-none self-end bg-black/50 backdrop-blur-md border border-amber-500/20 text-amber-200/90 text-[11px] px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-xl mt-2 transition-all';
+    this.hintBadge.innerHTML = `<span>🔄</span> <span>Тяните экран, чтобы вращать 3D сцену на 360°</span>`;
+    this.hudContainer.appendChild(this.hintBadge);
 
     // Bottom Area: Subtitle Bubble & Scene Stepper
     const bottomArea = document.createElement('div');
     bottomArea.className = 'w-full flex flex-col items-center gap-3 mb-2';
 
     // Subtitle Bubble
-    this.subtitleEl.className = 'pointer-events-auto max-w-2xl bg-black/75 backdrop-blur-lg border border-amber-400/30 text-amber-100 px-6 py-3.5 rounded-2xl text-center text-sm md:text-base leading-relaxed shadow-2xl transition-all duration-300';
+    this.subtitleEl.className = 'pointer-events-auto max-w-2xl bg-black/80 backdrop-blur-lg border border-amber-400/40 text-amber-100 px-6 py-3.5 rounded-2xl text-center text-sm md:text-base leading-relaxed shadow-2xl transition-all duration-300';
     this.subtitleEl.innerHTML = SCENES_DATA[0].subtitles.ru;
     bottomArea.appendChild(this.subtitleEl);
 
@@ -160,18 +165,22 @@ export class GameController {
           'Мышонок приветствует тебя! «Привет, друг!»',
           '«Я живу в центре мира и чувствую себя особенным!»',
           '«Время — это игрушка Вечности!»',
-          'Мышонок весело подпрыгнул!'
+          'Мышонок весело подпрыгнул в воздухе!'
         ];
         const pick = compliments[Math.floor(Math.random() * compliments.length)];
         this.updateSubtitle(pick);
       } else if (name === 'clock') {
-        // Warp time!
         const seasonsList: Season[] = ['winter', 'autumn', 'spring', 'summer'];
         const nextSeason = seasonsList[(seasonsList.indexOf(this.currentSeason) + 1) % seasonsList.length];
         this.changeSeason(nextSeason);
-        this.updateSubtitle('🕰️ Время ускорилось! Стрелки крутятся, и время года изменилось!');
+        this.updateSubtitle('🕰️ Время ускорилось! Стрелки будильника крутятся, меняя времена года!');
       } else if (name === 'window') {
-        this.updateSubtitle('🪟 Окошко распахнулось в сказочный Часовий Город!');
+        this.updateSubtitle('🪟 Окошко распахнулось в панораму Часового Города!');
+      } else if (name === 'cat') {
+        this.updateSubtitle('🐱 Пушистый Кот Мартин громко замурлыкал от удовольствия!');
+        confetti({ particleCount: 30, spread: 50, origin: { y: 0.7 } });
+      } else if (name === 'gear') {
+        this.updateSubtitle('⚙️ Золотая шестерёнка собрана! Механизм Часов ускоряет свой ход!');
       }
     });
   }
@@ -179,16 +188,6 @@ export class GameController {
   public changeSeason(season: Season) {
     this.currentSeason = season;
     this.diorama.setSeason(season);
-
-    // Update active button state
-    const btns = this.hudContainer.querySelectorAll<HTMLButtonElement>('.season-btn');
-    btns.forEach(btn => {
-      if (btn.dataset.season === season) {
-        btn.className = 'season-btn px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 transition-all bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-md';
-      } else {
-        btn.className = 'season-btn px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 transition-all text-amber-100/70 hover:text-white hover:bg-white/10';
-      }
-    });
   }
 
   public updateSubtitle(text: string) {
@@ -204,13 +203,13 @@ export class GameController {
       this.currentSceneIndex++;
       this.applyScene(this.currentSceneIndex);
     } else {
-      // Reached end of prologue -> Celebration confetti!
+      // Reached grand finale -> Celebration confetti!
       confetti({
-        particleCount: 80,
-        spread: 70,
+        particleCount: 120,
+        spread: 80,
         origin: { y: 0.6 }
       });
-      this.updateSubtitle('🌟 Вы разбудили Мышонка! Впереди — врата Часовьего города и встреча с Улиткой Матильдой!');
+      this.updateSubtitle('🌟 Сказка завершена! Мышонок, Улитка Матильда и Кот Мартин благодарят вас за путешествие по Часовому Городу!');
     }
   }
 
@@ -227,10 +226,36 @@ export class GameController {
     this.updateSubtitle(scene.subtitles[lang]);
     this.soundManager.playSceneNarration(idx);
 
-    if (idx === 1) {
-      this.changeSeason('winter');
-    } else if (idx === 2) {
-      this.changeSeason('autumn');
+    // Switch 3D Diorama Stage
+    this.diorama.setChapter(idx);
+
+    // Update active chapter button highlight
+    if (this.chapterBar) {
+      const btns = this.chapterBar.querySelectorAll<HTMLButtonElement>('.chapter-btn');
+      btns.forEach(btn => {
+        if (btn.dataset.chapter === idx.toString()) {
+          btn.className = 'chapter-btn px-2.5 sm:px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 transition-all bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-md scale-105';
+        } else {
+          btn.className = 'chapter-btn px-2.5 sm:px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 transition-all text-amber-100/70 hover:text-white hover:bg-white/10';
+        }
+      });
+    }
+
+    // Dynamic Hints per Chapter
+    if (this.hintBadge) {
+      const hints = [
+        '✨ Тапните на Мышонка или Будильник, вращайте спальню на 360°',
+        '❄️ Зимнее время года: покрутите стрелки будильника!',
+        '🍂 Осенний вечер: нажмите на мансардное окно!',
+        '☁️ Полёт в небесах: собирайте золотые шестерёнки в воздухе!',
+        '🚲 Времясипед в Часовом Городе: исследуйте улицы времени!',
+        '🐌 Улитка Матильда и 🐱 Кот Мартин: погладьте пушистого кота!'
+      ];
+      this.hintBadge.innerHTML = `<span>💡</span> <span>${hints[idx] || hints[0]}</span>`;
+    }
+
+    if (idx === 5) {
+      confetti({ particleCount: 60, spread: 60, origin: { y: 0.6 } });
     }
   }
 }

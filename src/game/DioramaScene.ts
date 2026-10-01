@@ -22,23 +22,40 @@ export class DioramaScene {
   private lampLight: THREE.PointLight;
   private windowSpotLight: THREE.SpotLight;
 
-  // Room Meshes
+  // Stages Groups
   private roomGroup: THREE.Group;
+  private skyStageGroup: THREE.Group;
+  private clocktownStageGroup: THREE.Group;
+  private charactersStageGroup: THREE.Group;
+
+  // Room Components
   private windowGroup: THREE.Group;
   private windowShutterLeft: THREE.Mesh;
   private windowShutterRight: THREE.Mesh;
   private isWindowOpen: boolean = true;
   private windowSkyMesh: THREE.Mesh;
-
-  // Dust motes inside room
   private dustPoints?: THREE.Points;
+
+  // Cloud Flight Stage Objects
+  private flightCloud?: THREE.Mesh;
+  private parallaxClouds: THREE.Mesh[] = [];
+  private goldenGears: THREE.Mesh[] = [];
+
+  // Clocktown Stage Objects
+  private timecycleGroup: THREE.Group;
+  private catMesh?: THREE.Mesh;
+  private snailMesh?: THREE.Mesh;
+  private flyingPapers: THREE.Mesh[] = [];
+
+  // Current Story Chapter (0 to 5)
+  private currentChapter: number = 0;
 
   // Camera Orbit Interaction
   private isDragging: boolean = false;
   private previousMousePosition = { x: 0, y: 0 };
-  private cameraTargetRotation = { x: 0.35, y: -0.42 };
-  private cameraCurrentRotation = { x: 0.35, y: -0.42 };
-  private cameraDistance: number = 8.6;
+  private cameraTargetRotation = { x: 0.32, y: -0.38 };
+  private cameraCurrentRotation = { x: 0.32, y: -0.38 };
+  private cameraDistance: number = 8.5;
 
   private raycaster = new THREE.Raycaster();
   private mouseVector = new THREE.Vector2();
@@ -51,7 +68,7 @@ export class DioramaScene {
 
     // 1. Scene & Renderer
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0x191438); // Deep magical night sky
+    this.scene.background = new THREE.Color(0x191438);
 
     const width = container.clientWidth || window.innerWidth || 1280;
     const height = container.clientHeight || window.innerHeight || 720;
@@ -69,70 +86,76 @@ export class DioramaScene {
     this.camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 100);
     this.updateCameraTransform();
 
-    // 3. Cinematic Lighting (Cozy storybook palette)
+    // 3. Lighting
     this.ambientLight = new THREE.AmbientLight(0xffeed8, 0.85);
     this.scene.add(this.ambientLight);
 
-    // Main Sunlight/Moonlight streaming in
     this.dirLight = new THREE.DirectionalLight(0xfffae8, 1.35);
     this.dirLight.position.set(4, 9, 5);
     this.dirLight.castShadow = true;
     this.dirLight.shadow.mapSize.width = 1024;
     this.dirLight.shadow.mapSize.height = 1024;
-    this.dirLight.shadow.bias = -0.0008;
-    this.dirLight.shadow.camera.near = 1;
-    this.dirLight.shadow.camera.far = 20;
-    this.dirLight.shadow.camera.left = -5;
-    this.dirLight.shadow.camera.right = 5;
-    this.dirLight.shadow.camera.top = 5;
-    this.dirLight.shadow.camera.bottom = -5;
     this.scene.add(this.dirLight);
 
-    // Cozy Bedside Lamp PointLight
     this.lampLight = new THREE.PointLight(0xffaa44, 2.2, 7);
     this.lampLight.position.set(2.1, 1.45, 0.65);
     this.lampLight.castShadow = true;
     this.scene.add(this.lampLight);
 
-    // Window light beam
     this.windowSpotLight = new THREE.SpotLight(0xfff3d6, 1.8, 14, Math.PI / 5, 0.5, 1);
     this.windowSpotLight.position.set(-0.4, 4.5, -4.5);
     this.windowSpotLight.target.position.set(0, 0, 0);
     this.scene.add(this.windowSpotLight);
     this.scene.add(this.windowSpotLight.target);
 
-    // 4. Build Authentic Attic Mansard Room
+    // 4. Initialize Stage Groups
     this.roomGroup = new THREE.Group();
     this.scene.add(this.roomGroup);
+
+    this.skyStageGroup = new THREE.Group();
+    this.skyStageGroup.position.y = -50; // Hidden initially
+    this.scene.add(this.skyStageGroup);
+
+    this.clocktownStageGroup = new THREE.Group();
+    this.clocktownStageGroup.position.y = -50; // Hidden initially
+    this.scene.add(this.clocktownStageGroup);
+
+    this.charactersStageGroup = new THREE.Group();
+    this.charactersStageGroup.position.y = -50; // Hidden initially
+    this.scene.add(this.charactersStageGroup);
+
+    this.timecycleGroup = new THREE.Group();
 
     this.windowGroup = new THREE.Group();
     this.windowShutterLeft = new THREE.Mesh();
     this.windowShutterRight = new THREE.Mesh();
     this.windowSkyMesh = new THREE.Mesh();
 
+    // 5. Build Stages
     this.buildMansardRoom();
+    this.buildSkyStage();
+    this.buildClocktownStage();
+    this.buildCharactersStage();
 
-    // 5. Add Authentic Purple Cosmic Alarm Clock (on the bedside nightstand)
+    // 6. Alarm Clock on Nightstand
     this.clock = new Clock3D();
     this.clock.group.position.set(2.1, 1.32, 0.65);
     this.clock.group.rotation.y = -Math.PI / 3.5;
     this.clock.group.scale.setScalar(0.78);
     this.scene.add(this.clock.group);
 
-    // 6. Add True 3D Volumetric Mousekin
+    // 7. Mousekin 3D Character
     this.character = new Character3D(this.camera);
     this.character.group.position.set(-0.25, 0, 0.35);
     this.character.group.rotation.y = -0.15;
     this.scene.add(this.character.group);
 
-    // 7. Add Floating Dust Motes
+    // 8. Particles & Dust
     this.buildDustMotes();
-
-    // 8. Add Seasonal Particles
     this.seasonParticles = new SeasonParticles();
     this.scene.add(this.seasonParticles.group);
 
-    // 9. Event Listeners
+    // 9. Interactions
     this.setupInteractions();
     window.addEventListener('resize', this.onWindowResize.bind(this));
   }
@@ -141,420 +164,214 @@ export class DioramaScene {
     this.onInteractionCallback = cb;
   }
 
+  // ==========================================
+  // STAGE 1: MANSARD BEDROOM
+  // ==========================================
   private buildMansardRoom() {
-    // Shared authentic materials
     const floorMat = new THREE.MeshStandardMaterial({
-      color: 0xb3763f, // Warm honey oak parquet planks
+      color: 0xb3763f,
       roughness: 0.55,
       metalness: 0.05
     });
 
-    const floorTrimMat = new THREE.MeshStandardMaterial({
-      color: 0x54280f,
-      roughness: 0.6
-    });
+    const floorTrimMat = new THREE.MeshStandardMaterial({ color: 0x54280f });
+    const wallWarmMat = new THREE.MeshStandardMaterial({ color: 0xeedcb8, roughness: 0.85 });
+    const wainscotMat = new THREE.MeshStandardMaterial({ color: 0xd6ad78, roughness: 0.65 });
+    const timberBeamMat = new THREE.MeshStandardMaterial({ color: 0x6e3c15, roughness: 0.5 });
 
-    const wallWarmMat = new THREE.MeshStandardMaterial({
-      color: 0xeedcb8, // Cozy storybook ochre-cream plaster (from theRoom.jpg)
-      roughness: 0.85
-    });
-
-    const wainscotMat = new THREE.MeshStandardMaterial({
-      color: 0xd6ad78, // Wooden bottom wainscoting paneling
-      roughness: 0.65
-    });
-
-    const timberBeamMat = new THREE.MeshStandardMaterial({
-      color: 0x6e3c15, // Heavy dark timber roof beams
-      roughness: 0.5
-    });
-
-    // ==========================================
-    // A. FLOOR
-    // ==========================================
-    const floorGeom = new THREE.BoxGeometry(6.6, 0.3, 6.6);
-    const floor = new THREE.Mesh(floorGeom, floorMat);
+    // Floor
+    const floor = new THREE.Mesh(new THREE.BoxGeometry(6.6, 0.3, 6.6), floorMat);
     floor.position.y = -0.15;
     floor.receiveShadow = true;
     this.roomGroup.add(floor);
 
-    // Planks seam grooves (visual tactile relief)
+    // Planks grooves
     for (let p = -3; p <= 3; p += 0.8) {
-      const seamGeom = new THREE.BoxGeometry(6.5, 0.01, 0.02);
-      const seamMat = new THREE.MeshBasicMaterial({ color: 0x8a5426 });
-      const seam = new THREE.Mesh(seamGeom, seamMat);
+      const seam = new THREE.Mesh(new THREE.BoxGeometry(6.5, 0.01, 0.02), new THREE.MeshBasicMaterial({ color: 0x8a5426 }));
       seam.position.set(0, 0.005, p);
       this.roomGroup.add(seam);
     }
 
-    // Floor edge trim
-    const trimGeom = new THREE.BoxGeometry(6.8, 0.12, 6.8);
-    const trim = new THREE.Mesh(trimGeom, floorTrimMat);
+    const trim = new THREE.Mesh(new THREE.BoxGeometry(6.8, 0.12, 6.8), floorTrimMat);
     trim.position.y = -0.22;
     this.roomGroup.add(trim);
 
-    // ==========================================
-    // B. BACK WALL WITH WINDOW & WAINSCOTING
-    // ==========================================
-    // Upper Wall (Plaster)
-    const backWallTopGeom = new THREE.BoxGeometry(6.4, 2.6, 0.25);
-    const backWallTop = new THREE.Mesh(backWallTopGeom, wallWarmMat);
+    // Back Wall
+    const backWallTop = new THREE.Mesh(new THREE.BoxGeometry(6.4, 2.6, 0.25), wallWarmMat);
     backWallTop.position.set(0, 3.2, -3.1);
     backWallTop.receiveShadow = true;
-    backWallTop.castShadow = true;
     this.roomGroup.add(backWallTop);
 
-    // Lower Wainscoting Paneling
-    const backWainscotGeom = new THREE.BoxGeometry(6.4, 1.9, 0.28);
-    const backWainscot = new THREE.Mesh(backWainscotGeom, wainscotMat);
+    const backWainscot = new THREE.Mesh(new THREE.BoxGeometry(6.4, 1.9, 0.28), wainscotMat);
     backWainscot.position.set(0, 0.95, -3.08);
     backWainscot.receiveShadow = true;
     this.roomGroup.add(backWainscot);
 
-    // Decorative Molded Strip / Chair Rail (from theRoom.jpg)
-    const chairRailGeom = new THREE.BoxGeometry(6.42, 0.12, 0.1);
-    const chairRail = new THREE.Mesh(chairRailGeom, timberBeamMat);
+    const chairRail = new THREE.Mesh(new THREE.BoxGeometry(6.42, 0.12, 0.1), timberBeamMat);
     chairRail.position.set(0, 1.9, -2.98);
     this.roomGroup.add(chairRail);
 
-    // Baseboard trim at bottom of wall
-    const baseboardGeom = new THREE.BoxGeometry(6.42, 0.18, 0.08);
-    const baseboard = new THREE.Mesh(baseboardGeom, timberBeamMat);
-    baseboard.position.set(0, 0.09, -2.98);
-    this.roomGroup.add(baseboard);
-
-    // ==========================================
-    // C. ATTIC MANSARD SLOPED CEILING & BEAMS (theRoom.jpg)
-    // ==========================================
-    // Sloped roof plane on the left
-    const roofGeom = new THREE.BoxGeometry(0.25, 5.2, 6.4);
-    const roofWall = new THREE.Mesh(roofGeom, wallWarmMat);
+    // Sloped Roof & Beams (theRoom.jpg)
+    const roofWall = new THREE.Mesh(new THREE.BoxGeometry(0.25, 5.2, 6.4), wallWarmMat);
     roofWall.position.set(-3.1, 2.4, 0);
     roofWall.receiveShadow = true;
     this.roomGroup.add(roofWall);
 
-    // Sloped Diagonal Ceiling Rafter (Mansard timber slope)
-    const slopedCeilingGeom = new THREE.BoxGeometry(3.6, 0.2, 6.4);
-    const slopedCeiling = new THREE.Mesh(slopedCeilingGeom, wallWarmMat);
+    const slopedCeiling = new THREE.Mesh(new THREE.BoxGeometry(3.6, 0.2, 6.4), wallWarmMat);
     slopedCeiling.position.set(-1.8, 4.1, 0);
     slopedCeiling.rotation.z = Math.PI * 0.18;
-    slopedCeiling.receiveShadow = true;
     this.roomGroup.add(slopedCeiling);
 
-    // Exposed Timber Rafter Beams
     for (let b = -2.2; b <= 2.2; b += 2.2) {
-      const beamGeom = new THREE.BoxGeometry(3.8, 0.25, 0.25);
-      const beam = new THREE.Mesh(beamGeom, timberBeamMat);
+      const beam = new THREE.Mesh(new THREE.BoxGeometry(3.8, 0.25, 0.25), timberBeamMat);
       beam.position.set(-1.8, 4.02, b);
       beam.rotation.z = Math.PI * 0.18;
       beam.castShadow = true;
       this.roomGroup.add(beam);
     }
 
-    // ==========================================
-    // D. WALL PROPS FROM theRoom.jpg
-    // ==========================================
-    // 1. Hanging Umbrella on the sloped wall
+    // Wall Props: Umbrella
     const umbrellaGroup = new THREE.Group();
     umbrellaGroup.position.set(-2.6, 2.8, -1.2);
     umbrellaGroup.rotation.z = -0.45;
 
-    // Curved wooden J-handle
-    const handleCurve = new THREE.CatmullRomCurve3([
-      new THREE.Vector3(0, 0, 0),
-      new THREE.Vector3(-0.06, 0.08, 0),
-      new THREE.Vector3(-0.12, 0.04, 0),
-      new THREE.Vector3(-0.14, -0.04, 0),
-      new THREE.Vector3(-0.1, -0.1, 0)
-    ]);
-    const handleGeom = new THREE.TubeGeometry(handleCurve, 12, 0.022, 8, false);
-    const handle = new THREE.Mesh(handleGeom, timberBeamMat);
+    const handle = new THREE.Mesh(
+      new THREE.TorusGeometry(0.08, 0.02, 8, 12, Math.PI),
+      timberBeamMat
+    );
     umbrellaGroup.add(handle);
 
-    // Umbrella cane shaft
-    const caneGeom = new THREE.CylinderGeometry(0.02, 0.02, 1.3, 10);
-    const cane = new THREE.Mesh(caneGeom, timberBeamMat);
-    cane.position.y = -0.65;
-    umbrellaGroup.add(cane);
-
-    // Rolled umbrella fabric cone
-    const fabricGeom = new THREE.ConeGeometry(0.12, 1.0, 12);
-    const fabricMat = new THREE.MeshStandardMaterial({ color: 0x8a6d58, roughness: 0.7 });
-    const fabric = new THREE.Mesh(fabricGeom, fabricMat);
+    const fabric = new THREE.Mesh(
+      new THREE.ConeGeometry(0.12, 1.0, 12),
+      new THREE.MeshStandardMaterial({ color: 0x8a6d58, roughness: 0.7 })
+    );
     fabric.position.y = -0.65;
-    fabric.castShadow = true;
     umbrellaGroup.add(fabric);
-
-    // Strap & silver tip
-    const tipGeom = new THREE.CylinderGeometry(0.015, 0.005, 0.12, 8);
-    const tip = new THREE.Mesh(tipGeom, new THREE.MeshStandardMaterial({ color: 0xcccccc, metalness: 0.8 }));
-    tip.position.y = -1.2;
-    umbrellaGroup.add(tip);
-
     this.roomGroup.add(umbrellaGroup);
 
-    // 2. Wooden Wall Shelf with Books and Scroll (from theRoom.jpg)
+    // Wall Props: Shelf with Books
     const shelfGroup = new THREE.Group();
     shelfGroup.position.set(-1.8, 2.3, -2.92);
-
-    // Shelf board
     const shelfBoard = new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.06, 0.35), timberBeamMat);
-    shelfBoard.castShadow = true;
     shelfGroup.add(shelfBoard);
 
-    // 2 Support Brackets
-    for (const sx of [-0.45, 0.45]) {
-      const bracketGeom = new THREE.BoxGeometry(0.05, 0.22, 0.22);
-      const bracket = new THREE.Mesh(bracketGeom, timberBeamMat);
-      bracket.position.set(sx, -0.11, -0.05);
-      shelfGroup.add(bracket);
-    }
-
-    // Books on the shelf
     const bookColors = [0x992222, 0x245538, 0x283b6b, 0xba7722];
     let bookX = -0.42;
     bookColors.forEach((col, idx) => {
       const bw = 0.065 + idx * 0.01;
       const bh = 0.38 - idx * 0.04;
-      const bGeom = new THREE.BoxGeometry(bw, bh, 0.24);
-      const bMat = new THREE.MeshStandardMaterial({ color: col, roughness: 0.6 });
-      const book = new THREE.Mesh(bGeom, bMat);
+      const book = new THREE.Mesh(
+        new THREE.BoxGeometry(bw, bh, 0.24),
+        new THREE.MeshStandardMaterial({ color: col, roughness: 0.6 })
+      );
       book.position.set(bookX, bh * 0.5 + 0.03, 0.02);
-      book.rotation.y = (idx % 2 === 0 ? 0.04 : -0.03);
-      book.castShadow = true;
       shelfGroup.add(book);
       bookX += bw + 0.02;
     });
 
-    // Rolled Parchment Scroll
-    const scrollGeom = new THREE.CylinderGeometry(0.045, 0.045, 0.32, 16);
-    scrollGeom.rotateZ(Math.PI / 2);
-    const scrollMat = new THREE.MeshStandardMaterial({ color: 0xf5ebd6, roughness: 0.8 });
-    const scroll = new THREE.Mesh(scrollGeom, scrollMat);
+    const scroll = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.045, 0.045, 0.32, 16),
+      new THREE.MeshStandardMaterial({ color: 0xf5ebd6, roughness: 0.8 })
+    );
+    scroll.rotation.z = Math.PI / 2;
     scroll.position.set(0.28, 0.06, 0.02);
-    scroll.castShadow = true;
     shelfGroup.add(scroll);
-
-    // Red ribbon around scroll
-    const ribbonGeom = new THREE.CylinderGeometry(0.048, 0.048, 0.04, 16);
-    ribbonGeom.rotateZ(Math.PI / 2);
-    const ribbon = new THREE.Mesh(ribbonGeom, new THREE.MeshBasicMaterial({ color: 0xc42b2b }));
-    ribbon.position.set(0.28, 0.06, 0.02);
-    shelfGroup.add(ribbon);
-
     this.roomGroup.add(shelfGroup);
 
-    // ==========================================
-    // E. WARM LIGHT-POOL RUG ON FLOOR (from theRoom.jpg)
-    // ==========================================
-    const rugGeom = new THREE.CircleGeometry(1.65, 36);
-    rugGeom.scale(1.2, 0.9, 1.0);
-    const rugMat = new THREE.MeshStandardMaterial({
-      color: 0xf5ebd2, // Soft warm moonlight/sunlight glow puddle
-      roughness: 0.92
-    });
-    const rug = new THREE.Mesh(rugGeom, rugMat);
+    // Light-Pool Rug
+    const rug = new THREE.Mesh(
+      new THREE.CircleGeometry(1.65, 36),
+      new THREE.MeshStandardMaterial({ color: 0xf5ebd2, roughness: 0.92 })
+    );
     rug.rotation.x = -Math.PI / 2;
     rug.position.set(-0.2, 0.012, 0.4);
     rug.receiveShadow = true;
     this.roomGroup.add(rug);
 
-    // ==========================================
-    // F. AUTHENTIC 3D FAIRY-TALE BED (Matching Bed.png)
-    // ==========================================
+    // Authentic Fairy-Tale Bed (Bed.png)
     const bedGroup = new THREE.Group();
     bedGroup.position.set(1.5, 0, -0.9);
     bedGroup.rotation.y = -0.22;
 
-    const rusticWoodMat = new THREE.MeshStandardMaterial({
-      color: 0x73431e, // Natural rustic wood post
-      roughness: 0.55
-    });
+    const rusticWoodMat = new THREE.MeshStandardMaterial({ color: 0x73431e, roughness: 0.55 });
+    const lavenderQuiltMat = new THREE.MeshStandardMaterial({ color: 0x646996, roughness: 0.72 });
+    const sheetWhiteMat = new THREE.MeshStandardMaterial({ color: 0xf5f2e8, roughness: 0.8 });
+    const starMat = new THREE.MeshStandardMaterial({ color: 0xffd215, emissive: 0x664400, roughness: 0.3, metalness: 0.6 });
+    const planetMat = new THREE.MeshStandardMaterial({ color: 0x796696, roughness: 0.4, metalness: 0.3 });
 
-    const lavenderQuiltMat = new THREE.MeshStandardMaterial({
-      color: 0x646996, // Authentic lilac-blue quilt from Bed.png
-      roughness: 0.72
-    });
-
-    const sheetWhiteMat = new THREE.MeshStandardMaterial({
-      color: 0xf5f2e8,
-      roughness: 0.8
-    });
-
-    const starMat = new THREE.MeshStandardMaterial({
-      color: 0xffd215, // Golden Star from Bed.png
-      emissive: 0x664400,
-      roughness: 0.3,
-      metalness: 0.6
-    });
-
-    const planetMat = new THREE.MeshStandardMaterial({
-      color: 0x796696, // Saturn Planet from Bed.png
-      roughness: 0.4,
-      metalness: 0.3
-    });
-
-    // 4 Corner Wooden Posts
     for (const x of [-1.15, 1.15]) {
       for (const z of [-0.68, 0.68]) {
         const postH = (x < 0) ? 1.55 : 0.95;
-        const postGeom = new THREE.CylinderGeometry(0.065, 0.075, postH, 14);
-        postGeom.translate(0, postH / 2, 0);
-        const post = new THREE.Mesh(postGeom, rusticWoodMat);
-        post.position.set(x, 0, z);
+        const post = new THREE.Mesh(new THREE.CylinderGeometry(0.065, 0.075, postH, 14), rusticWoodMat);
+        post.position.set(x, postH / 2, z);
         post.castShadow = true;
         bedGroup.add(post);
 
-        // Specific props on posts from Bed.png!
         if (x < 0 && z < 0) {
-          // Front-left post: GOLDEN 5-POINTED STAR on top!
-          const star5Geom = new THREE.ConeGeometry(0.14, 0.26, 5);
-          star5Geom.scale(1.2, 1.2, 0.5);
-          const star = new THREE.Mesh(star5Geom, starMat);
+          const star = new THREE.Mesh(new THREE.ConeGeometry(0.14, 0.26, 5), starMat);
           star.position.set(x, postH + 0.12, z);
           star.rotation.z = Math.PI;
-          star.castShadow = true;
           bedGroup.add(star);
         } else if (x < 0 && z > 0) {
-          // Side post: SATURN PLANET WITH RING!
           const planetGroup = new THREE.Group();
           planetGroup.position.set(x - 0.06, postH - 0.15, z);
-
-          const planetSphere = new THREE.Mesh(new THREE.SphereGeometry(0.08, 16, 14), planetMat);
-          planetGroup.add(planetSphere);
-
-          const ringGeom = new THREE.RingGeometry(0.1, 0.16, 24);
-          const ringMat = new THREE.MeshStandardMaterial({ color: 0xcca880, side: THREE.DoubleSide });
-          const ring = new THREE.Mesh(ringGeom, ringMat);
+          planetGroup.add(new THREE.Mesh(new THREE.SphereGeometry(0.08, 16, 14), planetMat));
+          const ring = new THREE.Mesh(new THREE.RingGeometry(0.1, 0.16, 24), new THREE.MeshStandardMaterial({ color: 0xcca880, side: THREE.DoubleSide }));
           ring.rotation.x = Math.PI / 2.8;
           planetGroup.add(ring);
-
           bedGroup.add(planetGroup);
-        } else {
-          // Rounded wooden finial
-          const finial = new THREE.Mesh(new THREE.SphereGeometry(0.08, 12, 12), rusticWoodMat);
-          finial.position.set(x, postH + 0.06, z);
-          bedGroup.add(finial);
         }
       }
     }
 
-    // Headboard slats
-    const headboardGeom = new THREE.BoxGeometry(0.08, 0.75, 1.28);
-    const headboard = new THREE.Mesh(headboardGeom, rusticWoodMat);
-    headboard.position.set(-1.15, 0.85, 0);
-    bedGroup.add(headboard);
-
-    // Bed Frame base
-    const baseGeom = new THREE.BoxGeometry(2.2, 0.2, 1.3);
-    const base = new THREE.Mesh(baseGeom, rusticWoodMat);
-    base.position.set(0, 0.36, 0);
-    base.castShadow = true;
-    base.receiveShadow = true;
-    bedGroup.add(base);
-
-    // Soft Mattress
-    const mattressGeom = new THREE.BoxGeometry(2.1, 0.3, 1.24);
-    const mattress = new THREE.Mesh(mattressGeom, sheetWhiteMat);
+    const mattress = new THREE.Mesh(new THREE.BoxGeometry(2.1, 0.3, 1.24), sheetWhiteMat);
     mattress.position.set(0, 0.54, 0);
-    mattress.castShadow = true;
-    mattress.receiveShadow = true;
     bedGroup.add(mattress);
 
-    // Fluffy Pillow
-    const pillowGeom = new THREE.SphereGeometry(0.32, 18, 16);
-    pillowGeom.scale(1.2, 0.45, 1.8);
-    const pillow = new THREE.Mesh(pillowGeom, sheetWhiteMat);
+    const pillow = new THREE.Mesh(new THREE.SphereGeometry(0.32, 18, 16), sheetWhiteMat);
+    pillow.scale.set(1.2, 0.45, 1.8);
     pillow.position.set(-0.72, 0.76, 0);
-    pillow.rotation.z = -0.15;
-    pillow.castShadow = true;
     bedGroup.add(pillow);
 
-    // Cozy Quilt with Dotted Edge & Plaid Patch (Bed.png)
-    const quiltGeom = new THREE.BoxGeometry(1.48, 0.34, 1.26);
-    const quilt = new THREE.Mesh(quiltGeom, lavenderQuiltMat);
+    const quilt = new THREE.Mesh(new THREE.BoxGeometry(1.48, 0.34, 1.26), lavenderQuiltMat);
     quilt.position.set(0.32, 0.56, 0);
-    quilt.castShadow = true;
-    quilt.receiveShadow = true;
     bedGroup.add(quilt);
 
-    // Folded white sheet brim
-    const brimGeom = new THREE.BoxGeometry(0.18, 0.35, 1.25);
-    const brim = new THREE.Mesh(brimGeom, sheetWhiteMat);
-    brim.position.set(-0.38, 0.57, 0);
-    bedGroup.add(brim);
-
-    // Little checkered plaid patch on the quilt corner (from Bed.png!)
-    const patchGeom = new THREE.PlaneGeometry(0.18, 0.18);
-    const patchMat = new THREE.MeshStandardMaterial({
-      color: 0xb53c52, // Warm reddish plaid patch
-      roughness: 0.8,
-      side: THREE.DoubleSide
-    });
-    const patch = new THREE.Mesh(patchGeom, patchMat);
+    const patch = new THREE.Mesh(new THREE.PlaneGeometry(0.18, 0.18), new THREE.MeshStandardMaterial({ color: 0xb53c52, side: THREE.DoubleSide }));
     patch.rotation.x = -Math.PI / 2;
     patch.position.set(0.85, 0.74, 0.42);
     bedGroup.add(patch);
 
     this.roomGroup.add(bedGroup);
 
-    // ==========================================
-    // G. RUSTIC NIGHTSTAND & WARM LANTERN
-    // ==========================================
+    // Rustic Nightstand
     const standGroup = new THREE.Group();
     standGroup.position.set(2.1, 0, 0.65);
-
-    // Round wooden table top
-    const topGeom = new THREE.CylinderGeometry(0.55, 0.55, 0.08, 24);
-    const tableTop = new THREE.Mesh(topGeom, rusticWoodMat);
+    const tableTop = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.55, 0.08, 24), rusticWoodMat);
     tableTop.position.y = 0.88;
-    tableTop.castShadow = true;
     standGroup.add(tableTop);
 
-    // Center Pedestal & 3 Curved Legs
-    const pillarGeom = new THREE.CylinderGeometry(0.1, 0.12, 0.84, 16);
-    const pillar = new THREE.Mesh(pillarGeom, rusticWoodMat);
+    const pillar = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.12, 0.84, 16), rusticWoodMat);
     pillar.position.y = 0.44;
     standGroup.add(pillar);
 
-    const baseDisk = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.45, 0.08, 20), rusticWoodMat);
-    baseDisk.position.y = 0.04;
-    standGroup.add(baseDisk);
-
-    // Glowing Lantern on the nightstand
-    const lanternGeom = new THREE.CylinderGeometry(0.14, 0.18, 0.35, 10);
-    const lanternMat = new THREE.MeshStandardMaterial({
-      color: 0xffea9f,
-      emissive: 0xffaa22,
-      emissiveIntensity: 1.1,
-      roughness: 0.2
-    });
-    const lantern = new THREE.Mesh(lanternGeom, lanternMat);
+    const lantern = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.14, 0.18, 0.35, 10),
+      new THREE.MeshStandardMaterial({ color: 0xffea9f, emissive: 0xffaa22, emissiveIntensity: 1.1 })
+    );
     lantern.position.set(0.18, 1.08, 0.2);
     standGroup.add(lantern);
 
-    // Brass handle ring on lantern
-    const lanternHandle = new THREE.Mesh(
-      new THREE.TorusGeometry(0.08, 0.015, 8, 16),
-      new THREE.MeshStandardMaterial({ color: 0x5a3210 })
-    );
-    lanternHandle.position.set(0.18, 1.32, 0.2);
-    standGroup.add(lanternHandle);
-
     this.roomGroup.add(standGroup);
 
-    // ==========================================
-    // H. FAIRY-TALE 3D WINDOW & SKY VIEW (ios111.jpg)
-    // ==========================================
+    // Fairy-Tale Window
     this.buildWindow();
   }
 
   private buildWindow() {
     this.windowGroup.position.set(-0.4, 2.5, -3.0);
-
     const frameMat = new THREE.MeshStandardMaterial({ color: 0x6e3c15, roughness: 0.5 });
 
-    // Outer Frame
     const topBar = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.15, 0.2), frameMat);
     topBar.position.set(0, 1.35, 0);
     this.windowGroup.add(topBar);
@@ -571,63 +388,212 @@ export class DioramaScene {
     rightBar.position.set(1.15, 0, 0);
     this.windowGroup.add(rightBar);
 
-    // Transparent Glass Pane
-    const glassGeom = new THREE.PlaneGeometry(2.2, 2.6);
-    const glassMat = new THREE.MeshStandardMaterial({
-      color: 0xa0d8ef,
-      transparent: true,
-      opacity: 0.2,
-      roughness: 0.1,
-      metalness: 0.1,
-      side: THREE.DoubleSide
-    });
-    const glass = new THREE.Mesh(glassGeom, glassMat);
+    const glass = new THREE.Mesh(
+      new THREE.PlaneGeometry(2.2, 2.6),
+      new THREE.MeshStandardMaterial({ color: 0xa0d8ef, transparent: true, opacity: 0.2, side: THREE.DoubleSide })
+    );
     this.windowGroup.add(glass);
-
-    // Sills
-    const intSill = new THREE.Mesh(new THREE.BoxGeometry(2.5, 0.12, 0.35), frameMat);
-    intSill.position.set(0, -1.35, 0.15);
-    this.windowGroup.add(intSill);
-
-    // Cross bars
-    const barV = new THREE.Mesh(new THREE.BoxGeometry(0.06, 2.5, 0.06), frameMat);
-    barV.position.set(0, 0, 0.08);
-    this.windowGroup.add(barV);
-
-    const barH = new THREE.Mesh(new THREE.BoxGeometry(2.1, 0.06, 0.06), frameMat);
-    barH.position.set(0, 0.2, 0.08);
-    this.windowGroup.add(barH);
 
     // Shutters
     const shutterGeom = new THREE.BoxGeometry(1.0, 2.5, 0.08);
     shutterGeom.translate(0.5, 0, 0);
-    const shutterMat = new THREE.MeshStandardMaterial({ color: 0x8b5226, roughness: 0.6 });
-
-    this.windowShutterLeft = new THREE.Mesh(shutterGeom, shutterMat);
+    this.windowShutterLeft = new THREE.Mesh(shutterGeom, frameMat);
     this.windowShutterLeft.position.set(-1.05, 0, 0.12);
-    this.windowShutterLeft.rotation.y = Math.PI * 0.48; // Open
+    this.windowShutterLeft.rotation.y = Math.PI * 0.48;
     this.windowGroup.add(this.windowShutterLeft);
 
     const shutterRightGeom = new THREE.BoxGeometry(1.0, 2.5, 0.08);
     shutterRightGeom.translate(-0.5, 0, 0);
-    this.windowShutterRight = new THREE.Mesh(shutterRightGeom, shutterMat);
+    this.windowShutterRight = new THREE.Mesh(shutterRightGeom, frameMat);
     this.windowShutterRight.position.set(1.05, 0, 0.12);
-    this.windowShutterRight.rotation.y = -Math.PI * 0.48; // Open
+    this.windowShutterRight.rotation.y = -Math.PI * 0.48;
     this.windowGroup.add(this.windowShutterRight);
 
-    // Sky Backdrop: Panoramic Town of Clocks (ios111.jpg)
+    // Sky Backdrop: Panoramic Town of Clocks
     const skyTex = new THREE.TextureLoader().load('/assets/images/ios111.jpg');
     skyTex.colorSpace = THREE.SRGBColorSpace;
-    const skyGeom = new THREE.PlaneGeometry(18, 12);
-    const skyMat = new THREE.MeshBasicMaterial({
-      map: skyTex,
-      side: THREE.DoubleSide
-    });
-    this.windowSkyMesh = new THREE.Mesh(skyGeom, skyMat);
+    this.windowSkyMesh = new THREE.Mesh(
+      new THREE.PlaneGeometry(18, 12),
+      new THREE.MeshBasicMaterial({ map: skyTex, side: THREE.DoubleSide })
+    );
     this.windowSkyMesh.position.set(-0.4, 3.0, -7.5);
     this.scene.add(this.windowSkyMesh);
 
     this.roomGroup.add(this.windowGroup);
+  }
+
+  // ==========================================
+  // STAGE 2: CLOUD FLIGHT TO CLOCKTOWN
+  // ==========================================
+  private buildSkyStage() {
+    const texLoader = new THREE.TextureLoader();
+
+    // Flight Cloud under Mousekin
+    const cloudTex = texLoader.load('/assets/images/Cloud1.png');
+    cloudTex.colorSpace = THREE.SRGBColorSpace;
+    const cloudMat = new THREE.MeshStandardMaterial({
+      map: cloudTex,
+      transparent: true,
+      roughness: 0.9,
+      emissive: 0xffeebb,
+      emissiveIntensity: 0.25
+    });
+    this.flightCloud = new THREE.Mesh(new THREE.PlaneGeometry(3.5, 2.2), cloudMat);
+    this.flightCloud.rotation.x = -Math.PI / 2.5;
+    this.flightCloud.position.set(-0.25, 0.05, 0.35);
+    this.skyStageGroup.add(this.flightCloud);
+
+    // Big Panoramic Clocktown Backdrop in Sky
+    const townSkyTex = texLoader.load('/assets/images/ios111.jpg');
+    townSkyTex.colorSpace = THREE.SRGBColorSpace;
+    const townBackdrop = new THREE.Mesh(
+      new THREE.PlaneGeometry(24, 16),
+      new THREE.MeshBasicMaterial({ map: townSkyTex, side: THREE.DoubleSide })
+    );
+    townBackdrop.position.set(0, 4.5, -8.5);
+    this.skyStageGroup.add(townBackdrop);
+
+    // Parallax Clouds Drifting By
+    const cloudImages = ['/assets/images/Cloud2.png', '/assets/images/Cloud3.png', '/assets/images/Cloud4.png'];
+    for (let i = 0; i < 6; i++) {
+      const cTex = texLoader.load(cloudImages[i % cloudImages.length]);
+      cTex.colorSpace = THREE.SRGBColorSpace;
+      const cMesh = new THREE.Mesh(
+        new THREE.PlaneGeometry(4.2, 2.6),
+        new THREE.MeshBasicMaterial({ map: cTex, transparent: true, opacity: 0.85 })
+      );
+      cMesh.position.set(
+        (Math.random() - 0.5) * 14,
+        Math.random() * 4.5 + 0.5,
+        (Math.random() - 0.5) * 6 - 2
+      );
+      this.parallaxClouds.push(cMesh);
+      this.skyStageGroup.add(cMesh);
+    }
+
+    // Collectible Golden Gears in the Air
+    const gearGeom = new THREE.TorusGeometry(0.28, 0.07, 12, 24);
+    const goldGearMat = new THREE.MeshStandardMaterial({
+      color: 0xffd700,
+      metalness: 0.85,
+      roughness: 0.2,
+      emissive: 0x553300
+    });
+    for (let g = 0; g < 4; g++) {
+      const gear = new THREE.Mesh(gearGeom, goldGearMat);
+      gear.position.set(
+        (g - 1.5) * 1.8,
+        1.5 + (g % 2) * 0.8,
+        (Math.random() - 0.5) * 2
+      );
+      this.goldenGears.push(gear);
+      this.skyStageGroup.add(gear);
+    }
+  }
+
+  // ==========================================
+  // STAGE 3: CLOCKTOWN TIMECYCLE
+  // ==========================================
+  private buildClocktownStage() {
+    const texLoader = new THREE.TextureLoader();
+
+    // Clocktown Street Backdrop
+    const townStreetTex = texLoader.load('/assets/images/Town_20.png');
+    townStreetTex.colorSpace = THREE.SRGBColorSpace;
+    const townStreetMesh = new THREE.Mesh(
+      new THREE.PlaneGeometry(16, 10),
+      new THREE.MeshBasicMaterial({ map: townStreetTex, transparent: true })
+    );
+    townStreetMesh.position.set(0, 3.8, -4.5);
+    this.clocktownStageGroup.add(townStreetMesh);
+
+    // Stone Pavement Ground
+    const roadMat = new THREE.MeshStandardMaterial({ color: 0x5c5064, roughness: 0.8 });
+    const road = new THREE.Mesh(new THREE.BoxGeometry(12, 0.3, 6), roadMat);
+    road.position.y = -0.15;
+    road.receiveShadow = true;
+    this.clocktownStageGroup.add(road);
+
+    // Authentic Timecycle (Two-wheeled clockwork vehicle)
+    this.timecycleGroup.position.set(-0.25, 0, 0.35);
+
+    const brassMat = new THREE.MeshStandardMaterial({ color: 0xdda43b, metalness: 0.8, roughness: 0.3 });
+    const tireMat = new THREE.MeshStandardMaterial({ color: 0x241d24, roughness: 0.7 });
+
+    // 2 Wheels with Clock Faces
+    for (const wx of [-0.65, 0.65]) {
+      const wheelSub = new THREE.Group();
+      wheelSub.position.set(wx, 0.45, 0);
+
+      const tire = new THREE.Mesh(new THREE.TorusGeometry(0.38, 0.06, 12, 28), tireMat);
+      wheelSub.add(tire);
+
+      const spokes = new THREE.Mesh(new THREE.CylinderGeometry(0.34, 0.34, 0.02, 12), brassMat);
+      spokes.rotation.x = Math.PI / 2;
+      wheelSub.add(spokes);
+
+      this.timecycleGroup.add(wheelSub);
+    }
+
+    // Frame & Handlebars
+    const frameBar = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 1.4, 8), brassMat);
+    frameBar.rotation.z = Math.PI / 2;
+    frameBar.position.set(0, 0.55, 0);
+    this.timecycleGroup.add(frameBar);
+
+    const fork = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.75, 8), brassMat);
+    fork.position.set(0.65, 0.82, 0);
+    this.timecycleGroup.add(fork);
+
+    const handlebar = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.06, 0.75), brassMat);
+    handlebar.position.set(0.65, 1.15, 0);
+    this.timecycleGroup.add(handlebar);
+
+    this.clocktownStageGroup.add(this.timecycleGroup);
+  }
+
+  // ==========================================
+  // STAGE 4 & 5: SNAIL OF PERFECTION & CAT MARTIN
+  // ==========================================
+  private buildCharactersStage() {
+    const texLoader = new THREE.TextureLoader();
+
+    // Snail of Perfection
+    const snailTex = texLoader.load('/assets/images/leftsnail.png');
+    snailTex.colorSpace = THREE.SRGBColorSpace;
+    this.snailMesh = new THREE.Mesh(
+      new THREE.PlaneGeometry(2.4, 2.2),
+      new THREE.MeshStandardMaterial({ map: snailTex, transparent: true, roughness: 0.6 })
+    );
+    this.snailMesh.position.set(-1.8, 1.1, 0);
+    this.charactersStageGroup.add(this.snailMesh);
+
+    // Woolly Cat Martin in Archive
+    const catTex = texLoader.load('/assets/images/WoolCat1.png');
+    catTex.colorSpace = THREE.SRGBColorSpace;
+    this.catMesh = new THREE.Mesh(
+      new THREE.PlaneGeometry(3.0, 2.4),
+      new THREE.MeshStandardMaterial({ map: catTex, transparent: true, roughness: 0.7 })
+    );
+    this.catMesh.position.set(1.9, 1.2, 0);
+    this.charactersStageGroup.add(this.catMesh);
+
+    // Swirling Flying Papers from the Fax Machine
+    const paperTex = texLoader.load('/assets/images/pergament.png');
+    paperTex.colorSpace = THREE.SRGBColorSpace;
+    const paperMat = new THREE.MeshBasicMaterial({ map: paperTex, transparent: true, side: THREE.DoubleSide });
+
+    for (let p = 0; p < 8; p++) {
+      const paper = new THREE.Mesh(new THREE.PlaneGeometry(0.45, 0.65), paperMat);
+      paper.position.set(
+        (Math.random() - 0.5) * 5,
+        Math.random() * 3 + 0.5,
+        (Math.random() - 0.5) * 3
+      );
+      paper.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+      this.flyingPapers.push(paper);
+      this.charactersStageGroup.add(paper);
+    }
   }
 
   private buildDustMotes() {
@@ -642,7 +608,6 @@ export class DioramaScene {
     }
 
     geom.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-
     const mat = new THREE.PointsMaterial({
       color: 0xffea9f,
       size: 0.06,
@@ -655,6 +620,64 @@ export class DioramaScene {
     this.scene.add(this.dustPoints);
   }
 
+  // ==========================================
+  // STORY CHAPTER SWITCHER
+  // ==========================================
+  public setChapter(chapterIndex: number) {
+    this.currentChapter = chapterIndex;
+
+    // Reset visibility of stages
+    this.roomGroup.position.y = -50;
+    this.skyStageGroup.position.y = -50;
+    this.clocktownStageGroup.position.y = -50;
+    this.charactersStageGroup.position.y = -50;
+    this.clock.group.visible = false;
+
+    if (chapterIndex <= 2) {
+      // Chapter 0, 1, 2: Mansard Bedroom
+      this.roomGroup.position.y = 0;
+      this.clock.group.visible = true;
+      this.character.group.position.set(-0.25, 0, 0.35);
+
+      if (chapterIndex === 0) {
+        this.setSeason('summer');
+      } else if (chapterIndex === 1) {
+        this.setSeason('winter');
+      } else if (chapterIndex === 2) {
+        this.setSeason('autumn');
+      }
+    } else if (chapterIndex === 3) {
+      // Chapter 3: Cloud Flight into the Sky!
+      this.skyStageGroup.position.y = 0;
+      this.character.group.position.set(-0.25, 0.65, 0.35); // Floating high on cloud
+      this.scene.background = new THREE.Color(0x38558a);
+      this.ambientLight.color.setHex(0xffffff);
+      this.ambientLight.intensity = 1.1;
+      this.dirLight.color.setHex(0xfffae8);
+      this.dirLight.intensity = 1.4;
+      this.seasonParticles.setSeason('summer');
+    } else if (chapterIndex === 4) {
+      // Chapter 4: Timecycle in Clocktown
+      this.clocktownStageGroup.position.y = 0;
+      this.character.group.position.set(-0.25, 0.55, 0.35); // Riding the Timecycle
+      this.scene.background = new THREE.Color(0x281d3e);
+      this.ambientLight.color.setHex(0xfad3aa);
+      this.ambientLight.intensity = 0.95;
+      this.dirLight.intensity = 1.25;
+      this.seasonParticles.setSeason('autumn');
+    } else if (chapterIndex === 5) {
+      // Chapter 5: Snail, Cat Martin & Grand Finale!
+      this.charactersStageGroup.position.y = 0;
+      this.character.group.position.set(0, 0, 0.5);
+      this.clock.group.visible = true;
+      this.clock.group.position.set(0, 1.2, -1.2);
+      this.scene.background = new THREE.Color(0x1a1532);
+      this.ambientLight.color.setHex(0xffeed8);
+      this.ambientLight.intensity = 1.05;
+      this.seasonParticles.setSeason('spring');
+    }
+  }
+
   public toggleWindow() {
     this.isWindowOpen = !this.isWindowOpen;
     const targetAngle = this.isWindowOpen ? Math.PI * 0.48 : 0;
@@ -665,7 +688,6 @@ export class DioramaScene {
   public setSeason(season: Season) {
     this.seasonParticles.setSeason(season);
 
-    // Dynamically adjust lighting and room mood based on season
     if (season === 'winter') {
       this.scene.background = new THREE.Color(0x0e172a);
       this.ambientLight.color.setHex(0xaad5f5);
@@ -673,7 +695,6 @@ export class DioramaScene {
       this.dirLight.color.setHex(0xc2e2fa);
       this.dirLight.intensity = 1.0;
       this.lampLight.intensity = 2.4;
-      this.windowSpotLight.color.setHex(0xb5daf5);
     } else if (season === 'summer') {
       this.scene.background = new THREE.Color(0x191438);
       this.ambientLight.color.setHex(0xffeed8);
@@ -681,7 +702,6 @@ export class DioramaScene {
       this.dirLight.color.setHex(0xfffae8);
       this.dirLight.intensity = 1.35;
       this.lampLight.intensity = 1.8;
-      this.windowSpotLight.color.setHex(0xfff3d6);
     } else if (season === 'autumn') {
       this.scene.background = new THREE.Color(0x24141d);
       this.ambientLight.color.setHex(0xfad3aa);
@@ -689,7 +709,6 @@ export class DioramaScene {
       this.dirLight.color.setHex(0xffb877);
       this.dirLight.intensity = 1.2;
       this.lampLight.intensity = 2.2;
-      this.windowSpotLight.color.setHex(0xffcf99);
     } else if (season === 'spring') {
       this.scene.background = new THREE.Color(0x1a1d30);
       this.ambientLight.color.setHex(0xfce8ee);
@@ -697,14 +716,12 @@ export class DioramaScene {
       this.dirLight.color.setHex(0xffe6b0);
       this.dirLight.intensity = 1.25;
       this.lampLight.intensity = 1.8;
-      this.windowSpotLight.color.setHex(0xffe2c4);
     }
   }
 
   private setupInteractions() {
     const el = this.renderer.domElement;
 
-    // Mouse / Touch Drag for 3D Camera Orbit
     const onStart = (clientX: number, clientY: number) => {
       this.isDragging = true;
       this.previousMousePosition = { x: clientX, y: clientY };
@@ -740,7 +757,7 @@ export class DioramaScene {
 
     window.addEventListener('touchend', onEnd);
 
-    // Click / Tap Raycasting for Props
+    // Click Raycasting
     el.addEventListener('click', (e) => {
       const rect = el.getBoundingClientRect();
       this.mouseVector.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
@@ -772,6 +789,28 @@ export class DioramaScene {
         this.toggleWindow();
         if (this.onInteractionCallback) this.onInteractionCallback('window');
         return;
+      }
+
+      // Check click on Cat Martin
+      if (this.catMesh) {
+        const catHits = this.raycaster.intersectObject(this.catMesh, true);
+        if (catHits.length > 0) {
+          this.soundManager.playPurr();
+          if (this.onInteractionCallback) this.onInteractionCallback('cat');
+          return;
+        }
+      }
+
+      // Check click on Golden Gears
+      for (const gear of this.goldenGears) {
+        const gearHits = this.raycaster.intersectObject(gear, true);
+        if (gearHits.length > 0) {
+          this.soundManager.playSpringWinding();
+          gear.scale.set(1.4, 1.4, 1.4);
+          setTimeout(() => gear.scale.set(1, 1, 1), 300);
+          if (this.onInteractionCallback) this.onInteractionCallback('gear');
+          return;
+        }
       }
     });
   }
@@ -807,7 +846,7 @@ export class DioramaScene {
       this.windowSkyMesh.visible = this.camera.position.z >= -3.5;
     }
 
-    // Animate subtle floating dust motes
+    // Animate Dust Motes
     if (this.dustPoints) {
       const pos = this.dustPoints.geometry.getAttribute('position') as THREE.BufferAttribute;
       const arr = pos.array as Float32Array;
@@ -817,6 +856,32 @@ export class DioramaScene {
         if (arr[i * 3 + 1] < 0.1) arr[i * 3 + 1] = 4.0;
       }
       pos.needsUpdate = true;
+    }
+
+    // Animate Chapter 3 Clouds & Gears
+    if (this.currentChapter === 3) {
+      if (this.flightCloud) {
+        this.flightCloud.position.y = 0.05 + Math.sin(time * 2) * 0.08;
+      }
+      this.parallaxClouds.forEach((c, idx) => {
+        c.position.x += Math.sin(time * 0.5 + idx) * 0.006;
+      });
+      this.goldenGears.forEach((g, idx) => {
+        g.rotation.z += (idx % 2 === 0 ? 0.02 : -0.02);
+      });
+    }
+
+    // Animate Chapter 4 Timecycle
+    if (this.currentChapter === 4) {
+      this.timecycleGroup.position.y = Math.sin(time * 6) * 0.02;
+    }
+
+    // Animate Chapter 5 Flying Papers
+    if (this.currentChapter === 5) {
+      this.flyingPapers.forEach((paper, idx) => {
+        paper.position.y += Math.sin(time * 2 + idx) * 0.006;
+        paper.rotation.z += 0.01;
+      });
     }
 
     this.clock.update(time);
