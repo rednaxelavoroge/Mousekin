@@ -2,144 +2,253 @@ import * as THREE from 'three';
 
 export class Clock3D {
   public group: THREE.Group;
-  public clockMesh: THREE.Mesh;
+  public clickTarget: THREE.Object3D;
+
   private hourHand: THREE.Mesh;
   private minuteHand: THREE.Mesh;
-  private pendulum: THREE.Group;
-  private gears: THREE.Mesh[] = [];
+  private bellsGroup: THREE.Group;
+  private striker: THREE.Mesh;
+  private clockBody: THREE.Mesh;
 
-  private isSpinningFast: boolean = false;
+  private isRinging: boolean = false;
+  private ringTimer: number = 0;
   private spinSpeed: number = 1;
-  private targetHourAngle: number = 0;
 
   constructor() {
     this.group = new THREE.Group();
 
-    // 1. Clock Case (Wooden Stylized)
-    const caseGeom = new THREE.BoxGeometry(1.4, 2.2, 0.4);
-    const caseMat = new THREE.MeshStandardMaterial({
-      color: 0x8b4513,
+    // Materials Palette (Matching authentic "Alarm.png" author's art)
+    const purpleBodyMat = new THREE.MeshStandardMaterial({
+      color: 0x332266, // Deep starry indigo-purple
+      roughness: 0.35,
+      metalness: 0.25
+    });
+
+    const brassBezelMat = new THREE.MeshStandardMaterial({
+      color: 0xdda43b, // Warm antique brass / gold
+      roughness: 0.25,
+      metalness: 0.75
+    });
+
+    const dialFaceMat = new THREE.MeshStandardMaterial({
+      color: 0xfaf6ed, // Warm ivory parchment
+      roughness: 0.85
+    });
+
+    const darkMetalMat = new THREE.MeshStandardMaterial({
+      color: 0x221a28,
       roughness: 0.5,
-      metalness: 0.1
+      metalness: 0.6
     });
-    const clockCase = new THREE.Mesh(caseGeom, caseMat);
-    clockCase.castShadow = true;
-    clockCase.receiveShadow = true;
-    this.group.add(clockCase);
 
-    // 2. Gold Rim / Face Base
-    const rimGeom = new THREE.CylinderGeometry(0.55, 0.55, 0.1, 32);
-    const goldMat = new THREE.MeshStandardMaterial({
-      color: 0xffd700,
+    const handMat = new THREE.MeshStandardMaterial({
+      color: 0x14101e,
       roughness: 0.3,
-      metalness: 0.8
+      metalness: 0.4
     });
-    const rim = new THREE.Mesh(rimGeom, goldMat);
-    rim.rotation.x = Math.PI / 2;
-    rim.position.set(0, 0.4, 0.2);
-    this.group.add(rim);
 
-    // 3. Dial Face (Ivory white)
-    const dialGeom = new THREE.CylinderGeometry(0.5, 0.5, 0.11, 32);
-    const dialMat = new THREE.MeshStandardMaterial({
-      color: 0xfffaea,
-      roughness: 0.8
+    const dotPurpleMat = new THREE.MeshBasicMaterial({
+      color: 0x9e1a8a // Vibrant magenta-purple dot markers from Alarm.png
     });
-    this.clockMesh = new THREE.Mesh(dialGeom, dialMat);
-    this.clockMesh.rotation.x = Math.PI / 2;
-    this.clockMesh.position.set(0, 0.4, 0.21);
-    this.group.add(this.clockMesh);
 
-    // Dial markings (12 hour ticks)
-    for (let i = 0; i < 12; i++) {
-      const angle = (i / 12) * Math.PI * 2;
-      const tickGeom = new THREE.BoxGeometry(0.04, 0.1, 0.02);
-      const tickMat = new THREE.MeshBasicMaterial({ color: 0x221100 });
-      const tick = new THREE.Mesh(tickGeom, tickMat);
-      tick.position.set(Math.sin(angle) * 0.4, 0.4 + Math.cos(angle) * 0.4, 0.27);
-      tick.rotation.z = -angle;
-      this.group.add(tick);
+    const starGoldMat = new THREE.MeshBasicMaterial({
+      color: 0xffe680 // Delicate star dots on outer casing
+    });
+
+    // ==========================================
+    // 1. MAIN CLOCK DRUM / CASING
+    // ==========================================
+    const drumRadius = 0.55;
+    const drumDepth = 0.35;
+    const drumGeom = new THREE.CylinderGeometry(drumRadius, drumRadius, drumDepth, 32);
+    drumGeom.rotateX(Math.PI / 2);
+    this.clockBody = new THREE.Mesh(drumGeom, purpleBodyMat);
+    this.clockBody.castShadow = true;
+    this.clockBody.receiveShadow = true;
+    this.group.add(this.clockBody);
+
+    // Front Brass Bezel Ring
+    const bezelGeom = new THREE.TorusGeometry(drumRadius + 0.02, 0.04, 16, 32);
+    const bezel = new THREE.Mesh(bezelGeom, brassBezelMat);
+    bezel.position.z = drumDepth * 0.5;
+    this.group.add(bezel);
+
+    // Little Gold Stars on the purple rim
+    for (let s = 0; s < 8; s++) {
+      const angle = (s / 8) * Math.PI * 2 + 0.2;
+      const starGeom = new THREE.CircleGeometry(0.028, 5);
+      const star = new THREE.Mesh(starGeom, starGoldMat);
+      star.position.set(
+        Math.cos(angle) * (drumRadius - 0.04),
+        Math.sin(angle) * (drumRadius - 0.04),
+        drumDepth * 0.5 + 0.015
+      );
+      this.group.add(star);
     }
 
-    // 4. Hour Hand
-    const hourGeom = new THREE.BoxGeometry(0.05, 0.28, 0.02);
-    hourGeom.translate(0, 0.14, 0);
-    const handMat = new THREE.MeshStandardMaterial({ color: 0x111111, metalness: 0.7 });
+    // ==========================================
+    // 2. DIAL FACE & NUMERALS
+    // ==========================================
+    const dialGeom = new THREE.CylinderGeometry(0.48, 0.48, 0.02, 32);
+    dialGeom.rotateX(Math.PI / 2);
+    const dial = new THREE.Mesh(dialGeom, dialFaceMat);
+    dial.position.z = drumDepth * 0.5 + 0.01;
+    this.group.add(dial);
+
+    // Hour Dots & Main Numeral Markers (12, 3, 6, 9)
+    for (let h = 1; h <= 12; h++) {
+      const angle = (h / 12) * Math.PI * 2;
+      const r = 0.36;
+      const x = Math.sin(angle) * r;
+      const y = Math.cos(angle) * r;
+
+      if (h % 3 === 0) {
+        // Main cardinal markers (12, 3, 6, 9)
+        const tickGeom = new THREE.BoxGeometry(0.035, 0.07, 0.01);
+        const tick = new THREE.Mesh(tickGeom, handMat);
+        tick.position.set(x, y, drumDepth * 0.5 + 0.025);
+        tick.rotation.z = -angle;
+        this.group.add(tick);
+      } else {
+        // Purple dots for intermediate hours
+        const dotGeom = new THREE.CircleGeometry(0.022, 12);
+        const dot = new THREE.Mesh(dotGeom, dotPurpleMat);
+        dot.position.set(x, y, drumDepth * 0.5 + 0.025);
+        this.group.add(dot);
+      }
+    }
+
+    // ==========================================
+    // 3. HANDS & CENTER PIN
+    // ==========================================
+    // Hour Hand (Ornate teardrop shape)
+    const hourGeom = new THREE.BoxGeometry(0.045, 0.22, 0.015);
+    hourGeom.translate(0, 0.1, 0);
     this.hourHand = new THREE.Mesh(hourGeom, handMat);
-    this.hourHand.position.set(0, 0.4, 0.28);
+    this.hourHand.position.set(0, 0, drumDepth * 0.5 + 0.03);
+    this.hourHand.rotation.z = -Math.PI * 0.65; // ~ 10 o'clock
     this.group.add(this.hourHand);
 
-    // 5. Minute Hand
-    const minGeom = new THREE.BoxGeometry(0.035, 0.38, 0.02);
-    minGeom.translate(0, 0.19, 0);
+    // Minute Hand (Pointed slender hand)
+    const minGeom = new THREE.BoxGeometry(0.03, 0.32, 0.015);
+    minGeom.translate(0, 0.15, 0);
     this.minuteHand = new THREE.Mesh(minGeom, handMat);
-    this.minuteHand.position.set(0, 0.4, 0.29);
+    this.minuteHand.position.set(0, 0, drumDepth * 0.5 + 0.035);
+    this.minuteHand.rotation.z = -Math.PI * 0.1; // ~ 1 o'clock
     this.group.add(this.minuteHand);
 
-    // 6. Center Pin
-    const pinGeom = new THREE.CylinderGeometry(0.06, 0.06, 0.04, 16);
-    const pin = new THREE.Mesh(pinGeom, goldMat);
-    pin.rotation.x = Math.PI / 2;
-    pin.position.set(0, 0.4, 0.3);
+    // Center brass cap
+    const pinGeom = new THREE.CylinderGeometry(0.05, 0.05, 0.04, 16);
+    pinGeom.rotateX(Math.PI / 2);
+    const pin = new THREE.Mesh(pinGeom, brassBezelMat);
+    pin.position.set(0, 0, drumDepth * 0.5 + 0.04);
     this.group.add(pin);
 
-    // 7. Pendulum
-    this.pendulum = new THREE.Group();
-    this.pendulum.position.set(0, -0.1, 0.05);
+    // ==========================================
+    // 4. RETRO ALARM BELLS & STRIKER
+    // ==========================================
+    this.bellsGroup = new THREE.Group();
 
-    const rodGeom = new THREE.CylinderGeometry(0.02, 0.02, 0.7, 12);
-    rodGeom.translate(0, -0.35, 0);
-    const rod = new THREE.Mesh(rodGeom, goldMat);
-    this.pendulum.add(rod);
+    const buildBell = (isLeft: boolean) => {
+      const bellSub = new THREE.Group();
+      const dir = isLeft ? -1 : 1;
+      bellSub.position.set(dir * 0.42, drumRadius + 0.18, 0);
+      bellSub.rotation.z = dir * -0.4;
 
-    const bobGeom = new THREE.CylinderGeometry(0.18, 0.18, 0.05, 24);
-    bobGeom.translate(0, -0.7, 0);
-    bobGeom.rotateX(Math.PI / 2);
-    const bob = new THREE.Mesh(bobGeom, goldMat);
-    this.pendulum.add(bob);
+      // Stem post
+      const stemGeom = new THREE.CylinderGeometry(0.03, 0.03, 0.18, 10);
+      const stem = new THREE.Mesh(stemGeom, darkMetalMat);
+      stem.position.y = -0.09;
+      bellSub.add(stem);
 
-    this.group.add(this.pendulum);
+      // Curved dome bell
+      const domeGeom = new THREE.SphereGeometry(0.24, 20, 16, 0, Math.PI * 2, 0, Math.PI * 0.5);
+      domeGeom.scale(1.0, 0.65, 1.0);
+      const dome = new THREE.Mesh(domeGeom, purpleBodyMat);
+      dome.castShadow = true;
+      bellSub.add(dome);
 
-    // 8. Little gears on top
-    const gearGeom = new THREE.CylinderGeometry(0.2, 0.2, 0.05, 8);
-    const gear1 = new THREE.Mesh(gearGeom, goldMat);
-    gear1.position.set(0.35, 1.25, 0);
-    gear1.rotation.x = Math.PI / 2;
-    this.gears.push(gear1);
-    this.group.add(gear1);
+      // Star on top of bell
+      const bellStar = new THREE.Mesh(new THREE.CircleGeometry(0.03, 5), starGoldMat);
+      bellStar.rotation.x = -Math.PI / 2;
+      bellStar.position.y = 0.16;
+      bellSub.add(bellStar);
 
-    const gear2 = new THREE.Mesh(gearGeom, goldMat);
-    gear2.position.set(-0.35, 1.25, 0);
-    gear2.rotation.x = Math.PI / 2;
-    gear2.scale.set(0.7, 0.7, 0.7);
-    this.gears.push(gear2);
-    this.group.add(gear2);
+      return bellSub;
+    };
+
+    this.bellsGroup.add(buildBell(true));
+    this.bellsGroup.add(buildBell(false));
+
+    // Striker hammer in center
+    const strikerStemGeom = new THREE.CylinderGeometry(0.02, 0.02, 0.16, 8);
+    const strikerStem = new THREE.Mesh(strikerStemGeom, darkMetalMat);
+    strikerStem.position.set(0, drumRadius + 0.08, 0);
+    this.bellsGroup.add(strikerStem);
+
+    const hammerGeom = new THREE.SphereGeometry(0.05, 12, 10);
+    this.striker = new THREE.Mesh(hammerGeom, brassBezelMat);
+    this.striker.position.set(0, drumRadius + 0.17, 0);
+    this.bellsGroup.add(this.striker);
+
+    this.group.add(this.bellsGroup);
+
+    // ==========================================
+    // 5. METAL FEET
+    // ==========================================
+    const footGeom = new THREE.CylinderGeometry(0.03, 0.05, 0.22, 10);
+    const footMat = darkMetalMat;
+
+    const leftFoot = new THREE.Mesh(footGeom, footMat);
+    leftFoot.position.set(-0.35, -drumRadius - 0.05, 0);
+    leftFoot.rotation.z = 0.35;
+    this.group.add(leftFoot);
+
+    const rightFoot = new THREE.Mesh(footGeom, footMat);
+    rightFoot.position.set(0.35, -drumRadius - 0.05, 0);
+    rightFoot.rotation.z = -0.35;
+    this.group.add(rightFoot);
+
+    // Rear kickstand
+    const standGeom = new THREE.CylinderGeometry(0.025, 0.035, 0.32, 8);
+    const stand = new THREE.Mesh(standGeom, footMat);
+    stand.position.set(0, -drumRadius * 0.5, -0.22);
+    stand.rotation.x = -0.6;
+    this.group.add(stand);
+
+    this.clickTarget = this.clockBody;
   }
 
-  public spinFast(durationMs: number = 2000) {
-    this.isSpinningFast = true;
-    this.spinSpeed = 15;
-    setTimeout(() => {
-      this.isSpinningFast = false;
-      this.spinSpeed = 1;
-    }, durationMs);
+  public spinFast(durationMs: number = 2400) {
+    this.isRinging = true;
+    this.spinSpeed = 22;
+    this.ringTimer = durationMs / 1000;
   }
 
   public update(time: number) {
-    // Normal ticking or crazy time-warp spin
-    if (this.isSpinningFast) {
-      this.minuteHand.rotation.z -= this.spinSpeed * 0.1;
-      this.hourHand.rotation.z -= this.spinSpeed * 0.015;
+    if (this.isRinging) {
+      this.ringTimer -= 0.016;
+
+      // Wild hand rotation!
+      this.minuteHand.rotation.z -= this.spinSpeed * 0.14;
+      this.hourHand.rotation.z -= this.spinSpeed * 0.018;
+
+      // Jiggling hammer and vibrating bells
+      this.striker.position.x = Math.sin(time * 65) * 0.07;
+      this.bellsGroup.rotation.z = Math.sin(time * 50) * 0.05;
+      this.clockBody.position.y = Math.sin(time * 70) * 0.015;
+
+      if (this.ringTimer <= 0) {
+        this.isRinging = false;
+        this.spinSpeed = 1;
+        this.striker.position.x = 0;
+        this.bellsGroup.rotation.z = 0;
+        this.clockBody.position.y = 0;
+      }
     } else {
-      this.minuteHand.rotation.z = -time * 0.5;
-      this.hourHand.rotation.z = -time * 0.04;
+      // Normal ticking
+      this.minuteHand.rotation.z = -time * 0.35;
+      this.hourHand.rotation.z = -time * 0.03;
     }
-
-    // Pendulum swing
-    this.pendulum.rotation.z = Math.sin(time * 3) * 0.25;
-
-    // Small decorative gears
-    if (this.gears[0]) this.gears[0].rotation.z = time * 0.8;
-    if (this.gears[1]) this.gears[1].rotation.z = -time * 1.2;
   }
 }
