@@ -157,21 +157,74 @@ export class DioramaScene {
     leftWall.receiveShadow = true;
     this.roomGroup.add(leftWall);
 
-    // D. Bed (Cozy fairy-tale bed)
-    const bedTexture = new THREE.TextureLoader().load('/assets/images/Bed.png');
-    bedTexture.colorSpace = THREE.SRGBColorSpace;
-    const bedGeom = new THREE.PlaneGeometry(2.6, 1.8);
-    const bedMat = new THREE.MeshStandardMaterial({
-      map: bedTexture,
-      transparent: true,
-      alphaTest: 0.05,
-      side: THREE.DoubleSide
-    });
-    const bedMesh = new THREE.Mesh(bedGeom, bedMat);
-    bedMesh.position.set(1.5, 0.9, -1.8);
-    bedMesh.rotation.y = -0.2;
-    bedMesh.castShadow = true;
-    this.roomGroup.add(bedMesh);
+    // D. True 3D Fairy-tale Bed
+    const bedGroup = new THREE.Group();
+    bedGroup.position.set(1.5, 0, -1.8);
+    bedGroup.rotation.y = -0.2;
+
+    const woodBedMat = new THREE.MeshStandardMaterial({ color: 0x6e3c15, roughness: 0.5 });
+    const sheetMat = new THREE.MeshStandardMaterial({ color: 0xf2ebdc, roughness: 0.8 });
+    const quiltMat = new THREE.MeshStandardMaterial({ color: 0x33446b, roughness: 0.7 });
+    const pillowMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.9 });
+
+    // 4 Corner Wooden Posts
+    for (const x of [-1.1, 1.1]) {
+      for (const z of [-0.65, 0.65]) {
+        const postH = (x < 0) ? 1.4 : 0.85;
+        const postGeom = new THREE.CylinderGeometry(0.06, 0.06, postH, 12);
+        postGeom.translate(0, postH / 2, 0);
+        const post = new THREE.Mesh(postGeom, woodBedMat);
+        post.position.set(x, 0, z);
+        post.castShadow = true;
+        bedGroup.add(post);
+
+        const finialGeom = new THREE.SphereGeometry(0.08, 12, 12);
+        const finial = new THREE.Mesh(finialGeom, new THREE.MeshStandardMaterial({ color: 0xffd700, metalness: 0.8, roughness: 0.3 }));
+        finial.position.set(x, postH, z);
+        bedGroup.add(finial);
+      }
+    }
+
+    // Headboard slats
+    const headboardGeom = new THREE.BoxGeometry(0.08, 0.7, 1.2);
+    const headboard = new THREE.Mesh(headboardGeom, woodBedMat);
+    headboard.position.set(-1.1, 0.8, 0);
+    bedGroup.add(headboard);
+
+    // Bed Frame base
+    const baseGeom = new THREE.BoxGeometry(2.1, 0.18, 1.25);
+    const base = new THREE.Mesh(baseGeom, woodBedMat);
+    base.position.set(0, 0.35, 0);
+    base.castShadow = true;
+    base.receiveShadow = true;
+    bedGroup.add(base);
+
+    // Soft Mattress
+    const mattressGeom = new THREE.BoxGeometry(2.0, 0.28, 1.2);
+    const mattress = new THREE.Mesh(mattressGeom, sheetMat);
+    mattress.position.set(0, 0.52, 0);
+    mattress.castShadow = true;
+    mattress.receiveShadow = true;
+    bedGroup.add(mattress);
+
+    // Fluffy Pillow
+    const pillowGeom = new THREE.BoxGeometry(0.45, 0.16, 0.85);
+    pillowGeom.scale(1, 0.8, 1);
+    const pillow = new THREE.Mesh(pillowGeom, pillowMat);
+    pillow.position.set(-0.7, 0.72, 0);
+    pillow.rotation.z = -0.15;
+    pillow.castShadow = true;
+    bedGroup.add(pillow);
+
+    // Cozy Quilt / Blanket
+    const quiltGeom = new THREE.BoxGeometry(1.4, 0.31, 1.22);
+    const quilt = new THREE.Mesh(quiltGeom, quiltMat);
+    quilt.position.set(0.3, 0.54, 0);
+    quilt.castShadow = true;
+    quilt.receiveShadow = true;
+    bedGroup.add(quilt);
+
+    this.roomGroup.add(bedGroup);
 
     // E. Nightstand + Glowing Lantern
     const standGeom = new THREE.CylinderGeometry(0.4, 0.45, 0.9, 16);
@@ -358,7 +411,7 @@ export class DioramaScene {
       this.raycaster.setFromCamera(this.mouseVector, this.camera);
 
       // Check click on Mouse
-      const charHits = this.raycaster.intersectObject(this.character.mesh, true);
+      const charHits = this.raycaster.intersectObject(this.character.group, true);
       if (charHits.length > 0) {
         this.character.jump();
         this.soundManager.playPurr();

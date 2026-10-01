@@ -6,3 +6,4 @@ assets
 *.jpg
 !public/**
 
+.vercel
