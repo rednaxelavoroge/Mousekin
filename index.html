@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Мышонок в Часовьем городе — Интерактивная 3D Сказка-Приключение</title>
+    
+    <!-- PWA & Mobile Meta -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#120e24" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Nunito', 'sans-serif'],
+              fairy: ['Caveat', 'cursive']
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-[#0d0a1a] text-slate-100 overflow-x-hidden antialiased">
+    <!-- Landing Page Container -->
+    <div id="landing-container" class="w-full"></div>
+
+    <!-- 3D Game Fullscreen View (hidden until launch) -->
+    <div id="game-container" class="fixed inset-0 z-50 bg-[#16132b] hidden flex flex-col">
+      <div id="canvas-container" class="w-full h-full relative cursor-grab active:cursor-grabbing"></div>
+      <div id="hud-container"></div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

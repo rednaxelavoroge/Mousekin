@@ -1,0 +1,9 @@
+{
+  "appId": "com.mousekin.clocktown",
+  "appName": "Мышонок в Часовьем городе",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

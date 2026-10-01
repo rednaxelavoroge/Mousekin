@@ -1,0 +1,44 @@
+/* Custom Fairy-Tale Animations and Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b2866;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(22, 17, 43, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* 3D Canvas Container */
+#canvas-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  touch-action: none;
+}
+
+/* Floating animation */
+@keyframes fairyFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.fairy-float {
+  animation: fairyFloat 4s ease-in-out infinite;
+}
