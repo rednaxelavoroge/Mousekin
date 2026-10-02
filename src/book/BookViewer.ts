@@ -707,6 +707,17 @@ export class BookViewer {
           return;
         }
 
+        const isAmbient = anim.repeat === 0 || 
+                          anim.id.includes('Eyes') || 
+                          anim.id.includes('Spring') || 
+                          anim.id.includes('leave') || 
+                          anim.id.includes('Snow') || 
+                          anim.id.includes('Bird') || 
+                          anim.id.includes('bird') || 
+                          anim.id.includes('machinery') || 
+                          anim.id.includes('snail') ||
+                          anim.id.includes('ClosedEyes');
+
         anim.tracks.forEach((track) => {
           const targetEl = document.getElementById(track.targetId);
           if (targetEl && track.keyframes && track.keyframes.length > 0) {
@@ -718,7 +729,7 @@ export class BookViewer {
 
             const wa = targetEl.animate(webKeyframes, {
               duration: track.durationMs > 0 ? track.durationMs : 100,
-              iterations: anim.repeat === 0 ? Infinity : 1,
+              iterations: isAmbient ? Infinity : (anim.repeat === 0 ? Infinity : 1),
               fill: 'forwards',
               easing: 'linear'
             });
@@ -726,6 +737,27 @@ export class BookViewer {
           }
         });
       });
+    }
+
+    // 4. Auto-trigger scene-establishing animations (e.g. parchment unrolling in Scene 2, mouse waking up in Scene 1, door opening in Scene 9 & 12, cart in Scene 17, title in Scene 0)
+    const primarySceneTriggers = [
+      'beginningbutton',
+      'OpenDoorbutton',
+      'DoorButtonbutton',
+      'moveButton',
+      'namebutton',
+      'openWindow1button',
+      'OpenEyesbutton'
+    ];
+
+    for (const [targetId, act] of Object.entries(touchActions)) {
+      const match = primarySceneTriggers.find(prefix => targetId.toLowerCase().includes(prefix.toLowerCase()));
+      if (match) {
+        setTimeout(() => {
+          this.triggerTouchAction(act, touchAnimations);
+        }, 350);
+        break;
+      }
     }
   }
 

@@ -231,6 +231,11 @@ def parse_animations_and_logic(xml_file, logic_root, centers, audio_map, scene_i
         aid = anim.get('id')
         typ = anim.get('type')
         rep = int(anim.get('repeat', '1'))
+        aid_lower = aid.lower()
+        ambient_keywords = ['eyes', 'spring', 'snow', 'leave', 'bird', 'machinery', 'fume', 'ticker', 'snail', 'lermontov', 'cheese', 'yoga', 'town20', 'mouseright01-1', 'fog', 'dust', 'sunnyclock', 'nightclock', 'millclock']
+        if any(kw in aid_lower for kw in ambient_keywords):
+            rep = 0
+        
         on_obj = anim.get('onObject')
         snd = anim.get('sound')
         lang = anim.get('lang', '')
@@ -259,6 +264,9 @@ def parse_animations_and_logic(xml_file, logic_root, centers, audio_map, scene_i
                 a_val = fr.get('a')
                 if a_val:
                     cur['a'] = float(a_val)
+                if 'clocksanim' in aid_lower:
+                    frac = i / max(1, len(raw_frames) - 1)
+                    cur['a'] = round(0.15 + 0.85 * frac, 3)
                 parsed.append((i * 0.05, dict(cur)))
             
             simp = simplify_track(parsed)
