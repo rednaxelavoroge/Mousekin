@@ -28,6 +28,9 @@ export class BookViewer {
   private ambientToggleButton!: HTMLButtonElement;
   private autoTurnButton!: HTMLButtonElement;
   private drawerElement!: HTMLElement;
+  private subtitlesPanel!: HTMLElement;
+  private toggleSubtitlesButton!: HTMLButtonElement;
+  private isSubtitlesVisible: boolean = true;
 
   // Touch gesture state
   private touchStartX = 0;
@@ -175,24 +178,35 @@ export class BookViewer {
         <!-- BOTTOM READING STRIP (COMPACT TELEPROMPTER) & AUDIO CONTROLS -->
         <footer id="text-blade" class="relative z-30 w-full px-3 py-2 sm:px-6 sm:py-3 bg-gradient-to-t from-black/95 via-black/80 to-transparent flex flex-col items-center">
           
-          <!-- SLEEK UNIFORM READING STRIP (Fixed height: exactly 2 lines, smooth vertical auto-scroll) -->
-          <div class="w-full max-w-3xl h-[60px] sm:h-[68px] relative rounded-2xl bg-black/60 backdrop-blur-md border border-white/15 shadow-xl px-4 sm:px-6 flex items-center overflow-hidden">
-            <div id="subtitles-viewport" class="w-full h-full overflow-y-hidden select-none py-2 text-center" style="-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);">
+          <!-- SLEEK UNIFORM READING STRIP (Fixed height: exactly 2 lines, smooth vertical auto-scroll, hideable) -->
+          <div id="subtitles-panel" class="w-full max-w-3xl h-[56px] sm:h-[64px] relative rounded-2xl bg-black/70 backdrop-blur-md border border-white/15 shadow-xl px-3 sm:px-5 flex items-center justify-between overflow-hidden transition-all duration-300">
+            <div id="subtitles-viewport" class="flex-1 h-full overflow-y-hidden select-none py-1.5 text-center" style="-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);">
               <p id="subtitles-container" class="text-sm sm:text-lg md:text-xl text-slate-100 font-sans leading-relaxed tracking-wide transition-all">
                 <span class="text-amber-200/80 italic">Загрузка сказки...</span>
               </p>
             </div>
+            <button id="btn-close-subtitles" title="Скрыть текст (читать без субтитров)" class="p-1 sm:p-1.5 rounded-lg text-slate-400 hover:text-white bg-white/5 hover:bg-white/15 transition ml-2 flex-shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
           </div>
 
-          <!-- Quick Audio Bar (Compact) -->
-          <div class="mt-1.5 flex items-center gap-4">
+          <!-- Quick Audio & Subtitle Controls Bar -->
+          <div class="mt-2 flex items-center gap-3 sm:gap-4">
+            <!-- T BUTTON: Toggle Subtitles On/Off -->
+            <button id="btn-toggle-subtitles" title="Показать/скрыть субтитры (Т)" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl border text-xs font-bold flex items-center gap-1.5 transition backdrop-blur-md bg-amber-500/20 border-amber-400/50 text-amber-300">
+              <span class="font-serif text-sm font-black">Т</span>
+              <span class="hidden sm:inline text-xs">Субтитры</span>
+            </button>
+
             <button id="btn-replay-narration" title="Повторить озвучку" class="p-1.5 text-slate-400 hover:text-white transition">
               <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
             </button>
+
             <button id="btn-play-pause" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold flex items-center justify-center shadow-lg shadow-amber-500/30 transform hover:scale-105 active:scale-95 transition">
               <svg id="icon-play" class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
               <svg id="icon-pause" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
             </button>
+
             <button id="btn-mute-narration" title="Включить/выключить голос" class="p-1.5 text-slate-400 hover:text-white transition">
               <svg id="icon-voice-on" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
             </button>
@@ -241,6 +255,17 @@ export class BookViewer {
     this.ambientToggleButton = document.getElementById('btn-ambient') as HTMLButtonElement;
     this.autoTurnButton = document.getElementById('btn-auto-turn') as HTMLButtonElement;
     this.drawerElement = document.getElementById('chapter-drawer')!;
+    this.subtitlesPanel = document.getElementById('subtitles-panel')!;
+    this.toggleSubtitlesButton = document.getElementById('btn-toggle-subtitles') as HTMLButtonElement;
+
+    // Subtitle toggles
+    this.toggleSubtitlesButton?.addEventListener('click', () => {
+      this.toggleSubtitles();
+    });
+
+    document.getElementById('btn-close-subtitles')?.addEventListener('click', () => {
+      this.toggleSubtitles(false);
+    });
 
     const coverImg = document.getElementById('cover-img') as HTMLImageElement;
     if (coverImg) {
@@ -472,15 +497,19 @@ export class BookViewer {
       div.setAttribute('style', overlay.style);
 
       const trigger = scene.touchTriggers.find(t => 
-        t.targetObject === overlay.id || 
-        (overlay.id.includes('button') && t.targetObject.includes('button'))
+        (t.lang === null || t.lang === this.currentLang) &&
+        (t.targetObject === overlay.id || 
+         (overlay.id.includes('button') && t.targetObject.includes('button')) ||
+         overlay.id.toLowerCase().includes(t.targetObject.toLowerCase()) ||
+         t.targetObject.toLowerCase().includes(overlay.id.toLowerCase()))
       );
 
       if (trigger) {
         div.style.cursor = 'pointer';
+        div.classList.add('hover:scale-105', 'active:scale-95', 'transition-transform');
         div.addEventListener('click', (e) => {
           e.stopPropagation();
-          this.handleObjectTouch(div, trigger);
+          this.handleObjectTouch(div, trigger, e);
         });
       }
 
@@ -496,7 +525,7 @@ export class BookViewer {
     });
   }
 
-  private handleObjectTouch(element: HTMLElement, trigger: { sound: string | null; targetObject: string }) {
+  private handleObjectTouch(element: HTMLElement, trigger: { sound: string | null; targetObject: string }, event?: MouseEvent) {
     if (trigger.sound) {
       this.audioController.playSFX(trigger.sound);
     }
@@ -511,6 +540,40 @@ export class BookViewer {
       duration: 500,
       easing: 'ease-out'
     });
+
+    if (event) {
+      this.spawnTouchSparkle(event.clientX, event.clientY);
+    }
+  }
+
+  private spawnTouchSparkle(x: number, y: number) {
+    const star = document.createElement('div');
+    star.className = 'fixed pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 text-amber-300 text-2xl select-none';
+    star.style.left = `${x}px`;
+    star.style.top = `${y}px`;
+    star.innerHTML = '✨';
+    document.body.appendChild(star);
+    star.animate([
+      { transform: 'translate(-50%, -50%) scale(0.5)', opacity: 1 },
+      { transform: 'translate(-50%, -70px) scale(1.4)', opacity: 0 }
+    ], { duration: 600, easing: 'ease-out' }).onfinish = () => star.remove();
+  }
+
+  private toggleSubtitles(forceState?: boolean) {
+    this.isSubtitlesVisible = forceState !== undefined ? forceState : !this.isSubtitlesVisible;
+    if (this.subtitlesPanel) {
+      if (this.isSubtitlesVisible) {
+        this.subtitlesPanel.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4', 'max-h-0', 'h-0', 'p-0', 'border-transparent');
+        this.subtitlesPanel.classList.add('h-[56px]', 'sm:h-[64px]', 'opacity-100');
+        this.toggleSubtitlesButton?.classList.add('bg-amber-500/20', 'border-amber-400/50', 'text-amber-300');
+        this.toggleSubtitlesButton?.classList.remove('bg-white/10', 'border-white/15', 'text-slate-400');
+      } else {
+        this.subtitlesPanel.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4', 'max-h-0', 'h-0', 'p-0', 'border-transparent');
+        this.subtitlesPanel.classList.remove('h-[56px]', 'sm:h-[64px]', 'opacity-100');
+        this.toggleSubtitlesButton?.classList.remove('bg-amber-500/20', 'border-amber-400/50', 'text-amber-300');
+        this.toggleSubtitlesButton?.classList.add('bg-white/10', 'border-white/15', 'text-slate-400');
+      }
+    }
   }
 
   private renderSubtitles(scene: BookScene) {

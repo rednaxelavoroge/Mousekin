@@ -118,11 +118,15 @@ def parse_html_scene(html_file):
         if img_src and re.search(r'[0-9a-f]{8}-[0-9a-f]{4}', img_src):
             continue
 
+        # Skip intermediate frames of spritesheet animation, keeping the base frame (_SSFRM0 or objects without _SSFRM)
+        if re.search(r'_SSFRM[1-9]', elem_id):
+            continue
+
         is_touch_target = (img_src is None) and ('button' in elem_id.lower() or 'touch' in elem_id.lower())
         
-        # Skip hidden animation keyframe clones if not a touch target
-        if 'opacity: 0.000000' in style_str and not is_touch_target:
-            continue
+        # If it is a visible image layer that was initially opacity 0, make it visible!
+        if img_src and 'opacity: 0.000000' in style_str:
+            style_str = style_str.replace('opacity: 0.000000', 'opacity: 1.000000')
             
         is_text = 'text-overlay' in classes
         if is_text:
@@ -200,6 +204,15 @@ def parse_anim_xml(xml_file, audio_map, scene_idx):
                 'sound': snd_path,
                 'lang': lang
             })
+            # Also attach trigger directly to character layer if on_obj is a button overlay
+            if 'button' in on_obj.lower():
+                clean_target = re.sub(r'1?button', '', on_obj, flags=re.IGNORECASE)
+                touch_triggers.append({
+                    'targetObject': clean_target,
+                    'animationId': anim_id,
+                    'sound': snd_path,
+                    'lang': lang
+                })
             
     return ambient_audio, touch_triggers
 
