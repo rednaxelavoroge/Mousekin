@@ -23,6 +23,31 @@ export interface OverlayLayer {
   isTouchTarget: boolean;
 }
 
+export interface AnimationKeyframe {
+  offset: number;
+  transform: string;
+  opacity: number;
+}
+
+export interface AnimationTrack {
+  targetId: string;
+  durationMs: number;
+  keyframes: AnimationKeyframe[];
+}
+
+export interface BookAnimation {
+  id: string;
+  type: string;
+  repeat: number;
+  lang?: string;
+  tracks: AnimationTrack[];
+}
+
+export interface TouchAction {
+  animationIds: string[];
+  sound: string | null;
+}
+
 export interface TouchTrigger {
   targetObject: string;
   animationId: string | null;
@@ -39,7 +64,10 @@ export interface BookScene {
   thumbnail: Record<SupportedLanguage, string>;
   languages: Record<SupportedLanguage, LanguageContent>;
   overlays: OverlayLayer[];
-  touchTriggers: TouchTrigger[];
+  startAnimations?: BookAnimation[];
+  touchAnimations?: Record<string, BookAnimation>;
+  touchActions?: Record<string, TouchAction>;
+  touchTriggers?: TouchTrigger[];
 }
 
 export interface BookManifest {
