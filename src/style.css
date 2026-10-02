@@ -1,44 +1,48 @@
-/* Custom Fairy-Tale Animations and Scrollbar */
+@font-face {
+  font-family: 'Stag-Light';
+  src: url('/book/fonts/Stag-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom fairy scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0d0a1a;
+  background: rgba(10, 8, 20, 0.6);
 }
 ::-webkit-scrollbar-thumb {
-  background: #3b2866;
+  background: rgba(245, 158, 11, 0.4);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d97706;
+  background: rgba(245, 158, 11, 0.8);
 }
 
-/* Glassmorphism utility */
-.glass-panel {
-  background: rgba(22, 17, 43, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(245, 158, 11, 0.2);
+/* Subtitle word highlight */
+.word-highlight {
+  color: #fbbf24 !important;
+  text-shadow: 0 0 16px rgba(251, 191, 36, 0.8), 0 0 30px rgba(245, 158, 11, 0.5);
+  transform: scale(1.05);
+  display: inline-block;
+  transition: all 0.12s ease-out;
 }
 
-/* 3D Canvas Container */
-#canvas-container canvas {
-  width: 100% !important;
-  height: 100% !important;
-  display: block;
-  touch-action: none;
+/* Global app container */
+#app {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
 }
 
-/* Floating animation */
-@keyframes fairyFloat {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(1deg);
-  }
-}
-
-.fairy-float {
-  animation: fairyFloat 4s ease-in-out infinite;
+/* Disable touch callout on images */
+img {
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
 }

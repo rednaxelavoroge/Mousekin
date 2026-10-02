@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mousekin-v1';
+const CACHE_NAME = 'mousekin-book-v2';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -6,22 +6,8 @@ const STATIC_ASSETS = [
   '/favicon.png',
   '/icon-192.png',
   '/icon-512.png',
-  '/assets/characters/mouse_cutout.png',
-  '/assets/characters/Мыш.png',
-  '/assets/characters/Ули.png',
-  '/assets/characters/кот.png',
-  '/assets/characters/Архи.png',
-  '/assets/images/coverRU.png',
-  '/assets/images/ios111.jpg',
-  '/assets/images/Bed.png',
-  '/assets/images/Alarm.png',
-  '/assets/images/ClosedWindow.png',
-  '/assets/images/Clocks.png',
-  '/assets/audio/intro.mp3',
-  '/assets/audio/s00_narration_ru.mp3',
-  '/assets/audio/s01_narration_ru.mp3',
-  '/assets/audio/s02_narration_ru.mp3',
-  '/assets/audio/murrr.mp3'
+  '/book/book_data.json',
+  '/book/fonts/Stag-Light.otf'
 ];
 
 self.addEventListener('install', (event) => {
@@ -48,16 +34,29 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+
   event.respondWith(
     caches.match(event.request).then((cached) => {
-      return (
-        cached ||
-        fetch(event.request).catch(() => {
-          if (event.request.destination === 'document') {
-            return caches.match('/index.html');
-          }
-        })
-      );
+      if (cached) return cached;
+
+      return fetch(event.request).then((response) => {
+        // Cache book images and media dynamically on the fly
+        if (
+          response.status === 200 &&
+          (event.request.url.includes('/book/images/') ||
+           event.request.url.includes('/book/screenshots/'))
+        ) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseClone);
+          });
+        }
+        return response;
+      }).catch(() => {
+        if (event.request.destination === 'document') {
+          return caches.match('/index.html');
+        }
+      });
     })
   );
 });
