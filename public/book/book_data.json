@@ -5185,7 +5185,7 @@
         "Szene_000__nameFogTitleTouchAnimBEN": {
           "id": "Szene_000__nameFogTitleTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -5294,7 +5294,7 @@
         "Szene_000__nameFogTitle_blackTouchAnimBEN": {
           "id": "Szene_000__nameFogTitle_blackTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -5393,7 +5393,7 @@
         "Szene_000__nameFogTitle1TouchAnimBEN": {
           "id": "Szene_000__nameFogTitle1TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -18131,7 +18131,7 @@
         "Szene_000__nameFogTitleTouchAnimCRU": {
           "id": "Szene_000__nameFogTitleTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -18240,7 +18240,7 @@
         "Szene_000__nameFogTitle_blackTouchAnimCRU": {
           "id": "Szene_000__nameFogTitle_blackTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -18339,7 +18339,7 @@
         "Szene_000__nameFogTitle1TouchAnimCRU": {
           "id": "Szene_000__nameFogTitle1TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -31077,7 +31077,7 @@
         "Szene_000__nameFogTitleTouchAnimDDE": {
           "id": "Szene_000__nameFogTitleTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -31186,7 +31186,7 @@
         "Szene_000__nameFogTitle_blackTouchAnimDDE": {
           "id": "Szene_000__nameFogTitle_blackTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -31285,7 +31285,7 @@
         "Szene_000__nameFogTitle1TouchAnimDDE": {
           "id": "Szene_000__nameFogTitle1TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -44787,7 +44787,7 @@
         "Szene_001__OpenEyesEyes01TouchAnimBEN": {
           "id": "Szene_001__OpenEyesEyes01TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -44841,7 +44841,7 @@
         "Szene_001__OpenEyesOpenEyesTouchAnimBEN": {
           "id": "Szene_001__OpenEyesOpenEyesTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -44875,7 +44875,7 @@
         "Szene_001__OpenEyessnowflake-11TouchAnimBEN": {
           "id": "Szene_001__OpenEyessnowflake-11TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -44929,14 +44929,14 @@
         "Szene_001__OpenEyesOpenEyesTouchAnimSoundBEN": {
           "id": "Szene_001__OpenEyesOpenEyesTouchAnimSoundBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": []
         },
         "Szene_001__OpenEyesEyes01TouchAnimCRU": {
           "id": "Szene_001__OpenEyesEyes01TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -44990,7 +44990,7 @@
         "Szene_001__OpenEyesOpenEyesTouchAnimCRU": {
           "id": "Szene_001__OpenEyesOpenEyesTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -45024,7 +45024,7 @@
         "Szene_001__OpenEyessnowflake-11TouchAnimCRU": {
           "id": "Szene_001__OpenEyessnowflake-11TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -45078,14 +45078,14 @@
         "Szene_001__OpenEyesOpenEyesTouchAnimSoundCRU": {
           "id": "Szene_001__OpenEyesOpenEyesTouchAnimSoundCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": []
         },
         "Szene_001__OpenEyesEyes01TouchAnimDDE": {
           "id": "Szene_001__OpenEyesEyes01TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -45139,7 +45139,7 @@
         "Szene_001__OpenEyesOpenEyesTouchAnimDDE": {
           "id": "Szene_001__OpenEyesOpenEyesTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -45173,7 +45173,7 @@
         "Szene_001__OpenEyessnowflake-11TouchAnimDDE": {
           "id": "Szene_001__OpenEyessnowflake-11TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -45227,7 +45227,7 @@
         "Szene_001__OpenEyesOpenEyesTouchAnimSoundDDE": {
           "id": "Szene_001__OpenEyesOpenEyesTouchAnimSoundDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": []
         }
@@ -50837,7 +50837,7 @@
         "Szene_003__MapCheeseMapTouchAnimBEN": {
           "id": "Szene_003__MapCheeseMapTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -51044,7 +51044,7 @@
         "Szene_003__openWindow1Snow01TouchAnimBEN": {
           "id": "Szene_003__openWindow1Snow01TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -51238,7 +51238,7 @@
         "Szene_003__openWindow1Snow1TouchAnimBEN": {
           "id": "Szene_003__openWindow1Snow1TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -51377,7 +51377,7 @@
         "Szene_003__openWindow1Snow3TouchAnimBEN": {
           "id": "Szene_003__openWindow1Snow3TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -51521,7 +51521,7 @@
         "Szene_003__openWindow1Snowdraft_2TouchAnimBEN": {
           "id": "Szene_003__openWindow1Snowdraft_2TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -51585,7 +51585,7 @@
         "Szene_003__openWindow1Snowdraft_3TouchAnimBEN": {
           "id": "Szene_003__openWindow1Snowdraft_3TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -51644,7 +51644,7 @@
         "Szene_003__openWindow1Snowdraft_4TouchAnimBEN": {
           "id": "Szene_003__openWindow1Snowdraft_4TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -51705,7 +51705,7 @@
         "Szene_003__MapCheeseMapTouchAnimCRU": {
           "id": "Szene_003__MapCheeseMapTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -51912,7 +51912,7 @@
         "Szene_003__openWindow1Snow01TouchAnimCRU": {
           "id": "Szene_003__openWindow1Snow01TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -52106,7 +52106,7 @@
         "Szene_003__openWindow1Snow1TouchAnimCRU": {
           "id": "Szene_003__openWindow1Snow1TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -52245,7 +52245,7 @@
         "Szene_003__openWindow1Snow3TouchAnimCRU": {
           "id": "Szene_003__openWindow1Snow3TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -52389,7 +52389,7 @@
         "Szene_003__openWindow1Snowdraft_2TouchAnimCRU": {
           "id": "Szene_003__openWindow1Snowdraft_2TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -52453,7 +52453,7 @@
         "Szene_003__openWindow1Snowdraft_3TouchAnimCRU": {
           "id": "Szene_003__openWindow1Snowdraft_3TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -52512,7 +52512,7 @@
         "Szene_003__openWindow1Snowdraft_4TouchAnimCRU": {
           "id": "Szene_003__openWindow1Snowdraft_4TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -52573,7 +52573,7 @@
         "Szene_003__MapCheeseMapTouchAnimDDE": {
           "id": "Szene_003__MapCheeseMapTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -52780,7 +52780,7 @@
         "Szene_003__openWindow1Snow01TouchAnimDDE": {
           "id": "Szene_003__openWindow1Snow01TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -52974,7 +52974,7 @@
         "Szene_003__openWindow1Snow1TouchAnimDDE": {
           "id": "Szene_003__openWindow1Snow1TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -53113,7 +53113,7 @@
         "Szene_003__openWindow1Snow3TouchAnimDDE": {
           "id": "Szene_003__openWindow1Snow3TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -53257,7 +53257,7 @@
         "Szene_003__openWindow1Snowdraft_2TouchAnimDDE": {
           "id": "Szene_003__openWindow1Snowdraft_2TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -53321,7 +53321,7 @@
         "Szene_003__openWindow1Snowdraft_3TouchAnimDDE": {
           "id": "Szene_003__openWindow1Snowdraft_3TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -53380,7 +53380,7 @@
         "Szene_003__openWindow1Snowdraft_4TouchAnimDDE": {
           "id": "Szene_003__openWindow1Snowdraft_4TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -58482,7 +58482,7 @@
         {
           "id": "Szene_005__Spring3Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -58521,7 +58521,7 @@
         {
           "id": "Szene_005__Spring2Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -58570,7 +58570,7 @@
         {
           "id": "Szene_005__Eyes01Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -58624,7 +58624,7 @@
         {
           "id": "Szene_005__birdRigtAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -58858,7 +58858,7 @@
         {
           "id": "Szene_005__bird2rightAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -64296,7 +64296,7 @@
         {
           "id": "Szene_006__MillClockAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -64390,27 +64390,22 @@
                 {
                   "offset": 0.0,
                   "transform": "translate(0.0px, 0.0px) rotate(0.0deg) scale(0.524, 0.481)",
-                  "opacity": 0.0
+                  "opacity": 0.15
                 },
                 {
                   "offset": 0.274,
                   "transform": "translate(1.0px, -63.0px) rotate(0.0deg) scale(0.658, 0.645)",
-                  "opacity": 0.0
+                  "opacity": 0.383
                 },
                 {
-                  "offset": 0.346,
-                  "transform": "translate(1.0px, -79.0px) rotate(0.0deg) scale(0.694, 0.688)",
-                  "opacity": 0.025
+                  "offset": 0.547,
+                  "transform": "translate(2.0px, -125.0px) rotate(0.0deg) scale(0.792, 0.808)",
+                  "opacity": 0.615
                 },
                 {
-                  "offset": 0.62,
-                  "transform": "translate(3.0px, -141.0px) rotate(0.0deg) scale(0.828, 0.852)",
-                  "opacity": 0.433
-                },
-                {
-                  "offset": 0.894,
-                  "transform": "translate(4.0px, -203.0px) rotate(0.0deg) scale(0.962, 1.016)",
-                  "opacity": 0.842
+                  "offset": 0.821,
+                  "transform": "translate(4.0px, -187.0px) rotate(0.0deg) scale(0.926, 0.972)",
+                  "opacity": 0.848
                 },
                 {
                   "offset": 1.0,
@@ -64424,7 +64419,7 @@
         {
           "id": "Szene_006__NightClockAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -64607,7 +64602,7 @@
         {
           "id": "Szene_006__DustAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -64651,7 +64646,7 @@
         {
           "id": "Szene_006__SunnyClockAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -64754,7 +64749,7 @@
         {
           "id": "Szene_006__FogTitleAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -66775,7 +66770,7 @@
         {
           "id": "Szene_007__FogTitleAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -74492,7 +74487,7 @@
         {
           "id": "Szene_008__Fume2Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -74786,7 +74781,7 @@
         {
           "id": "Szene_008__machinery3Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -74935,7 +74930,7 @@
         {
           "id": "Szene_008__machinery5Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -75114,7 +75109,7 @@
         {
           "id": "Szene_008__machinery1Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -75451,7 +75446,7 @@
         {
           "id": "Szene_008__machinery9Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -76203,7 +76198,7 @@
         {
           "id": "Szene_008__TickerAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -76347,7 +76342,7 @@
         {
           "id": "Szene_008__FumeAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -76501,7 +76496,7 @@
         {
           "id": "Szene_008__machinery4Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -76650,7 +76645,7 @@
         {
           "id": "Szene_008__machinery6Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -77113,7 +77108,7 @@
         {
           "id": "Szene_008__machinery7Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -77297,7 +77292,7 @@
         {
           "id": "Szene_008__machinery8Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -78325,7 +78320,7 @@
         {
           "id": "Szene_008__BirdAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -78736,7 +78731,7 @@
         {
           "id": "Szene_008__TickersAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -78940,7 +78935,7 @@
         {
           "id": "Szene_008__machinery2Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -93301,7 +93296,7 @@
         {
           "id": "Szene_010__ClosedEyesAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -114180,7 +114175,7 @@
         {
           "id": "Szene_011__leftsnailAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -114279,7 +114274,7 @@
         {
           "id": "Szene_011__rightsnailAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -114383,7 +114378,7 @@
         {
           "id": "Szene_011__machinery2Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -114427,7 +114422,7 @@
         {
           "id": "Szene_011__PerfectSnailHalfAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -114909,7 +114904,7 @@
         {
           "id": "Szene_011__PerfectSnailAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -116831,7 +116826,7 @@
         "Szene_012__1ButtondUSTYButtonTouchAnimBEN": {
           "id": "Szene_012__1ButtondUSTYButtonTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -116875,7 +116870,7 @@
         "Szene_012__1ButtonDustyClockTouchAnimBEN": {
           "id": "Szene_012__1ButtonDustyClockTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -116914,7 +116909,7 @@
         "Szene_012__1ButtonDustyDetailTouchAnimBEN": {
           "id": "Szene_012__1ButtonDustyDetailTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -116953,7 +116948,7 @@
         "Szene_012__1ButtonDustyDoorTouchAnimBEN": {
           "id": "Szene_012__1ButtonDustyDoorTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -116977,7 +116972,7 @@
         "Szene_012__1ButtonDustyDoorBlackTouchAnimBEN": {
           "id": "Szene_012__1ButtonDustyDoorBlackTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -117286,7 +117281,7 @@
         "Szene_012__dUSTYButton__DustyDustTouchAnimBEN": {
           "id": "Szene_012__dUSTYButton__DustyDustTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -117320,7 +117315,7 @@
         "Szene_012__dUSTYButtonDustyBranchesTouchAnimBEN": {
           "id": "Szene_012__dUSTYButtonDustyBranchesTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -117359,7 +117354,7 @@
         "Szene_012__dUSTYButtondUSTYButtonTouchAnimBEN": {
           "id": "Szene_012__dUSTYButtondUSTYButtonTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -117383,7 +117378,7 @@
         "Szene_012__dUSTYButtonDustyDetailTouchAnimBEN": {
           "id": "Szene_012__dUSTYButtonDustyDetailTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -117417,7 +117412,7 @@
         "Szene_012__dUSTYButtondUSTYButtonTouchAnimSoundBEN": {
           "id": "Szene_012__dUSTYButtondUSTYButtonTouchAnimSoundBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": []
         },
@@ -117508,7 +117503,7 @@
         "Szene_012__DoorButtonDustyDoorTouchAnimBEN": {
           "id": "Szene_012__DoorButtonDustyDoorTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -117537,7 +117532,7 @@
         "Szene_012__DoorButtonDustyDoorBlackTouchAnimBEN": {
           "id": "Szene_012__DoorButtonDustyDoorBlackTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -117650,7 +117645,7 @@
         "Szene_012__1ButtondUSTYButtonTouchAnimCRU": {
           "id": "Szene_012__1ButtondUSTYButtonTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -117694,7 +117689,7 @@
         "Szene_012__1ButtonDustyClockTouchAnimCRU": {
           "id": "Szene_012__1ButtonDustyClockTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -117733,7 +117728,7 @@
         "Szene_012__1ButtonDustyDetailTouchAnimCRU": {
           "id": "Szene_012__1ButtonDustyDetailTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -117772,7 +117767,7 @@
         "Szene_012__1ButtonDustyDoorTouchAnimCRU": {
           "id": "Szene_012__1ButtonDustyDoorTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -117796,7 +117791,7 @@
         "Szene_012__1ButtonDustyDoorBlackTouchAnimCRU": {
           "id": "Szene_012__1ButtonDustyDoorBlackTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -118105,7 +118100,7 @@
         "Szene_012__dUSTYButton__DustyDustTouchAnimCRU": {
           "id": "Szene_012__dUSTYButton__DustyDustTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -118139,7 +118134,7 @@
         "Szene_012__dUSTYButtonDustyBranchesTouchAnimCRU": {
           "id": "Szene_012__dUSTYButtonDustyBranchesTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -118178,7 +118173,7 @@
         "Szene_012__dUSTYButtondUSTYButtonTouchAnimCRU": {
           "id": "Szene_012__dUSTYButtondUSTYButtonTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -118202,7 +118197,7 @@
         "Szene_012__dUSTYButtonDustyDetailTouchAnimCRU": {
           "id": "Szene_012__dUSTYButtonDustyDetailTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -118236,7 +118231,7 @@
         "Szene_012__dUSTYButtondUSTYButtonTouchAnimSoundCRU": {
           "id": "Szene_012__dUSTYButtondUSTYButtonTouchAnimSoundCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": []
         },
@@ -118327,7 +118322,7 @@
         "Szene_012__DoorButtonDustyDoorTouchAnimCRU": {
           "id": "Szene_012__DoorButtonDustyDoorTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -118356,7 +118351,7 @@
         "Szene_012__DoorButtonDustyDoorBlackTouchAnimCRU": {
           "id": "Szene_012__DoorButtonDustyDoorBlackTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -118469,7 +118464,7 @@
         "Szene_012__1ButtondUSTYButtonTouchAnimDDE": {
           "id": "Szene_012__1ButtondUSTYButtonTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -118513,7 +118508,7 @@
         "Szene_012__1ButtonDustyClockTouchAnimDDE": {
           "id": "Szene_012__1ButtonDustyClockTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -118552,7 +118547,7 @@
         "Szene_012__1ButtonDustyDetailTouchAnimDDE": {
           "id": "Szene_012__1ButtonDustyDetailTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -118591,7 +118586,7 @@
         "Szene_012__1ButtonDustyDoorTouchAnimDDE": {
           "id": "Szene_012__1ButtonDustyDoorTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -118615,7 +118610,7 @@
         "Szene_012__1ButtonDustyDoorBlackTouchAnimDDE": {
           "id": "Szene_012__1ButtonDustyDoorBlackTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -118924,7 +118919,7 @@
         "Szene_012__dUSTYButton__DustyDustTouchAnimDDE": {
           "id": "Szene_012__dUSTYButton__DustyDustTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -118958,7 +118953,7 @@
         "Szene_012__dUSTYButtonDustyBranchesTouchAnimDDE": {
           "id": "Szene_012__dUSTYButtonDustyBranchesTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -118997,7 +118992,7 @@
         "Szene_012__dUSTYButtondUSTYButtonTouchAnimDDE": {
           "id": "Szene_012__dUSTYButtondUSTYButtonTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -119021,7 +119016,7 @@
         "Szene_012__dUSTYButtonDustyDetailTouchAnimDDE": {
           "id": "Szene_012__dUSTYButtonDustyDetailTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -119055,7 +119050,7 @@
         "Szene_012__dUSTYButtondUSTYButtonTouchAnimSoundDDE": {
           "id": "Szene_012__dUSTYButtondUSTYButtonTouchAnimSoundDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": []
         },
@@ -119146,7 +119141,7 @@
         "Szene_012__DoorButtonDustyDoorTouchAnimDDE": {
           "id": "Szene_012__DoorButtonDustyDoorTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -119175,7 +119170,7 @@
         "Szene_012__DoorButtonDustyDoorBlackTouchAnimDDE": {
           "id": "Szene_012__DoorButtonDustyDoorBlackTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -122529,7 +122524,7 @@
         {
           "id": "Szene_013__mouseDustAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -125150,7 +125145,7 @@
         "Szene_013__lightButtonDustyLightTouchAnimBEN": {
           "id": "Szene_013__lightButtonDustyLightTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -125186,7 +125181,7 @@
         "Szene_013__eyesButtonDustyCatEyesTouchAnimBEN": {
           "id": "Szene_013__eyesButtonDustyCatEyesTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -127796,7 +127791,7 @@
         "Szene_013__lightButtonDustyLightTouchAnimCRU": {
           "id": "Szene_013__lightButtonDustyLightTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -127832,7 +127827,7 @@
         "Szene_013__eyesButtonDustyCatEyesTouchAnimCRU": {
           "id": "Szene_013__eyesButtonDustyCatEyesTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -130442,7 +130437,7 @@
         "Szene_013__lightButtonDustyLightTouchAnimDDE": {
           "id": "Szene_013__lightButtonDustyLightTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -130478,7 +130473,7 @@
         "Szene_013__eyesButtonDustyCatEyesTouchAnimDDE": {
           "id": "Szene_013__eyesButtonDustyCatEyesTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -135552,7 +135547,7 @@
         "Szene_014__arhiStatueButtonDustButtonTouchAnimBEN": {
           "id": "Szene_014__arhiStatueButtonDustButtonTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -135581,7 +135576,7 @@
         "Szene_014__arhiStatueButtonDustyLightTouchAnimBEN": {
           "id": "Szene_014__arhiStatueButtonDustyLightTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -135719,7 +135714,7 @@
         "Szene_014__ApchhiButtonCloseeyeDustTouchAnimBEN": {
           "id": "Szene_014__ApchhiButtonCloseeyeDustTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -135758,7 +135753,7 @@
         "Szene_014__ApchhiButtonDustyLightTouchAnimBEN": {
           "id": "Szene_014__ApchhiButtonDustyLightTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -135976,7 +135971,7 @@
         "Szene_014__CatButtonDustyCAT1TouchAnimBEN": {
           "id": "Szene_014__CatButtonDustyCAT1TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -136012,7 +136007,7 @@
         "Szene_014__DustButtonDustButtonTouchAnimBEN": {
           "id": "Szene_014__DustButtonDustButtonTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -136046,7 +136041,7 @@
         "Szene_014__DustButtonDustyCLOUDTouchAnimBEN": {
           "id": "Szene_014__DustButtonDustyCLOUDTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -136090,7 +136085,7 @@
         "Szene_014__DustButtonDustyLightTouchAnimBEN": {
           "id": "Szene_014__DustButtonDustyLightTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -136154,7 +136149,7 @@
         "Szene_014__DustButtonDustylight1TouchAnimBEN": {
           "id": "Szene_014__DustButtonDustylight1TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -136188,7 +136183,7 @@
         "Szene_014__DustButtonDustButtonTouchAnimSoundBEN": {
           "id": "Szene_014__DustButtonDustButtonTouchAnimSoundBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": []
         },
@@ -136358,7 +136353,7 @@
         "Szene_014__arhiStatueButtonDustButtonTouchAnimCRU": {
           "id": "Szene_014__arhiStatueButtonDustButtonTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -136387,7 +136382,7 @@
         "Szene_014__arhiStatueButtonDustyLightTouchAnimCRU": {
           "id": "Szene_014__arhiStatueButtonDustyLightTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -136525,7 +136520,7 @@
         "Szene_014__ApchhiButtonCloseeyeDustTouchAnimCRU": {
           "id": "Szene_014__ApchhiButtonCloseeyeDustTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -136564,7 +136559,7 @@
         "Szene_014__ApchhiButtonDustyLightTouchAnimCRU": {
           "id": "Szene_014__ApchhiButtonDustyLightTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -136782,7 +136777,7 @@
         "Szene_014__CatButtonDustyCAT1TouchAnimCRU": {
           "id": "Szene_014__CatButtonDustyCAT1TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -136818,7 +136813,7 @@
         "Szene_014__DustButtonDustButtonTouchAnimCRU": {
           "id": "Szene_014__DustButtonDustButtonTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -136852,7 +136847,7 @@
         "Szene_014__DustButtonDustyCLOUDTouchAnimCRU": {
           "id": "Szene_014__DustButtonDustyCLOUDTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -136896,7 +136891,7 @@
         "Szene_014__DustButtonDustyLightTouchAnimCRU": {
           "id": "Szene_014__DustButtonDustyLightTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -136960,7 +136955,7 @@
         "Szene_014__DustButtonDustylight1TouchAnimCRU": {
           "id": "Szene_014__DustButtonDustylight1TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -136994,7 +136989,7 @@
         "Szene_014__DustButtonDustButtonTouchAnimSoundCRU": {
           "id": "Szene_014__DustButtonDustButtonTouchAnimSoundCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": []
         },
@@ -137164,7 +137159,7 @@
         "Szene_014__arhiStatueButtonDustButtonTouchAnimDDE": {
           "id": "Szene_014__arhiStatueButtonDustButtonTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -137193,7 +137188,7 @@
         "Szene_014__arhiStatueButtonDustyLightTouchAnimDDE": {
           "id": "Szene_014__arhiStatueButtonDustyLightTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -137331,7 +137326,7 @@
         "Szene_014__ApchhiButtonCloseeyeDustTouchAnimDDE": {
           "id": "Szene_014__ApchhiButtonCloseeyeDustTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -137370,7 +137365,7 @@
         "Szene_014__ApchhiButtonDustyLightTouchAnimDDE": {
           "id": "Szene_014__ApchhiButtonDustyLightTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -137588,7 +137583,7 @@
         "Szene_014__CatButtonDustyCAT1TouchAnimDDE": {
           "id": "Szene_014__CatButtonDustyCAT1TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -137624,7 +137619,7 @@
         "Szene_014__DustButtonDustButtonTouchAnimDDE": {
           "id": "Szene_014__DustButtonDustButtonTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -137658,7 +137653,7 @@
         "Szene_014__DustButtonDustyCLOUDTouchAnimDDE": {
           "id": "Szene_014__DustButtonDustyCLOUDTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -137702,7 +137697,7 @@
         "Szene_014__DustButtonDustyLightTouchAnimDDE": {
           "id": "Szene_014__DustButtonDustyLightTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -137766,7 +137761,7 @@
         "Szene_014__DustButtonDustylight1TouchAnimDDE": {
           "id": "Szene_014__DustButtonDustylight1TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -137800,7 +137795,7 @@
         "Szene_014__DustButtonDustButtonTouchAnimSoundDDE": {
           "id": "Szene_014__DustButtonDustButtonTouchAnimSoundDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": []
         },
@@ -142376,7 +142371,7 @@
         "Szene_015__cATButton4DustyCatEyesTouchAnimBEN": {
           "id": "Szene_015__cATButton4DustyCatEyesTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -144910,7 +144905,7 @@
         "Szene_015__cATButton4DustyCatEyesTouchAnimCRU": {
           "id": "Szene_015__cATButton4DustyCatEyesTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -147444,7 +147439,7 @@
         "Szene_015__cATButton4DustyCatEyesTouchAnimDDE": {
           "id": "Szene_015__cATButton4DustyCatEyesTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -151734,7 +151729,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM0BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM0BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -151758,7 +151753,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM1BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM1BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -151787,7 +151782,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM2BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM2BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -151816,7 +151811,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM3BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM3BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -151845,7 +151840,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM4BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM4BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -151874,7 +151869,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM5BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM5BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -151903,7 +151898,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM6BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM6BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -151932,7 +151927,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM7BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM7BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -151961,7 +151956,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM8BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM8BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -151990,7 +151985,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM9BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM9BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -152019,7 +152014,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM10BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM10BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -152048,7 +152043,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM11BEN": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM11BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -152212,7 +152207,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM0CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM0CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152236,7 +152231,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM1CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM1CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152265,7 +152260,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM2CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM2CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152294,7 +152289,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM3CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM3CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152323,7 +152318,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM4CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM4CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152352,7 +152347,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM5CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM5CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152381,7 +152376,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM6CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM6CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152410,7 +152405,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM7CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM7CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152439,7 +152434,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM8CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM8CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152468,7 +152463,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM9CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM9CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152497,7 +152492,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM10CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM10CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152526,7 +152521,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM11CRU": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM11CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -152690,7 +152685,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM0DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM0DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152714,7 +152709,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM1DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM1DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152743,7 +152738,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM2DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM2DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152772,7 +152767,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM3DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM3DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152801,7 +152796,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM4DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM4DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152830,7 +152825,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM5DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM5DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152859,7 +152854,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM6DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM6DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152888,7 +152883,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM7DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM7DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152917,7 +152912,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM8DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM8DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152946,7 +152941,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM9DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM9DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -152975,7 +152970,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM10DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM10DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -153004,7 +152999,7 @@
         "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM11DDE": {
           "id": "Szene_016__wOOLButtonDustyCAT1TouchAnim_SSFRM11DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -156220,7 +156215,7 @@
         "Szene_017__moveButton__DustyDustTouchAnimBEN": {
           "id": "Szene_017__moveButton__DustyDustTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156254,7 +156249,7 @@
         "Szene_017__moveButtonDustyBranchesTouchAnimBEN": {
           "id": "Szene_017__moveButtonDustyBranchesTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156288,7 +156283,7 @@
         "Szene_017__moveButtonDustyClockTouchAnimBEN": {
           "id": "Szene_017__moveButtonDustyClockTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156327,7 +156322,7 @@
         "Szene_017__moveButtonDustyDetailTouchAnimBEN": {
           "id": "Szene_017__moveButtonDustyDetailTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156371,7 +156366,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM0BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM0BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156415,7 +156410,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM1BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM1BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156464,7 +156459,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM2BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM2BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156513,7 +156508,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM3BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM3BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156562,7 +156557,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM4BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM4BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156616,7 +156611,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM5BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM5BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156675,7 +156670,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM6BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM6BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156729,7 +156724,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM7BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM7BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156788,7 +156783,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM8BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM8BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156842,7 +156837,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM9BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM9BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156901,7 +156896,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM10BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM10BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -156955,7 +156950,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM11BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM11BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157009,7 +157004,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM12BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM12BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157068,7 +157063,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM13BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM13BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157117,7 +157112,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM14BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM14BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157156,7 +157151,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM15BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM15BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157195,7 +157190,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM16BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM16BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157234,7 +157229,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM17BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM17BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157273,7 +157268,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM18BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM18BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157312,7 +157307,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM19BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM19BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157351,7 +157346,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM20BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM20BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157390,7 +157385,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM21BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM21BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157429,7 +157424,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM22BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM22BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157468,7 +157463,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM23BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM23BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157507,7 +157502,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM24BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM24BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157546,7 +157541,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM25BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM25BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157585,7 +157580,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM26BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM26BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157624,7 +157619,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM27BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM27BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157663,7 +157658,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM28BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM28BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157702,7 +157697,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM29BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM29BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157741,7 +157736,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM30BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM30BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157780,7 +157775,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM31BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM31BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157819,7 +157814,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM32BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM32BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157858,7 +157853,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM33BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM33BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157897,7 +157892,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM34BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM34BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157936,7 +157931,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM35BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM35BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -157975,7 +157970,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM36BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM36BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158014,7 +158009,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM37BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM37BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158053,7 +158048,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM38BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM38BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158092,7 +158087,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM39BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM39BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158131,7 +158126,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM40BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM40BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158170,7 +158165,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM41BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM41BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158209,7 +158204,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM42BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM42BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158248,7 +158243,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM43BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM43BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158287,7 +158282,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM44BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM44BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158326,7 +158321,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM45BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM45BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158365,7 +158360,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM46BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM46BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158404,7 +158399,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM47BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM47BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158443,7 +158438,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM48BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM48BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158482,7 +158477,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM49BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM49BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158521,7 +158516,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM50BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM50BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158560,7 +158555,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM51BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM51BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158599,7 +158594,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM52BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM52BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158638,7 +158633,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM53BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM53BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158677,7 +158672,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM54BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM54BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158716,7 +158711,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM55BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM55BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158755,7 +158750,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM56BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM56BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158794,7 +158789,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM57BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM57BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158833,7 +158828,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM58BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM58BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158872,7 +158867,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM59BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM59BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -158911,7 +158906,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM60BEN": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM60BEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -159084,7 +159079,7 @@
         "Szene_017__moveButton__DustyDustTouchAnimCRU": {
           "id": "Szene_017__moveButton__DustyDustTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159118,7 +159113,7 @@
         "Szene_017__moveButtonDustyBranchesTouchAnimCRU": {
           "id": "Szene_017__moveButtonDustyBranchesTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159152,7 +159147,7 @@
         "Szene_017__moveButtonDustyClockTouchAnimCRU": {
           "id": "Szene_017__moveButtonDustyClockTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159191,7 +159186,7 @@
         "Szene_017__moveButtonDustyDetailTouchAnimCRU": {
           "id": "Szene_017__moveButtonDustyDetailTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159235,7 +159230,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM0CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM0CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159279,7 +159274,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM1CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM1CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159328,7 +159323,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM2CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM2CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159377,7 +159372,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM3CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM3CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159426,7 +159421,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM4CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM4CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159480,7 +159475,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM5CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM5CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159539,7 +159534,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM6CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM6CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159593,7 +159588,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM7CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM7CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159652,7 +159647,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM8CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM8CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159706,7 +159701,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM9CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM9CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159765,7 +159760,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM10CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM10CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159819,7 +159814,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM11CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM11CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159873,7 +159868,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM12CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM12CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159932,7 +159927,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM13CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM13CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -159981,7 +159976,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM14CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM14CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160020,7 +160015,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM15CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM15CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160059,7 +160054,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM16CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM16CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160098,7 +160093,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM17CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM17CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160137,7 +160132,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM18CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM18CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160176,7 +160171,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM19CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM19CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160215,7 +160210,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM20CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM20CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160254,7 +160249,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM21CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM21CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160293,7 +160288,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM22CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM22CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160332,7 +160327,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM23CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM23CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160371,7 +160366,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM24CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM24CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160410,7 +160405,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM25CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM25CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160449,7 +160444,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM26CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM26CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160488,7 +160483,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM27CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM27CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160527,7 +160522,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM28CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM28CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160566,7 +160561,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM29CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM29CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160605,7 +160600,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM30CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM30CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160644,7 +160639,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM31CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM31CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160683,7 +160678,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM32CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM32CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160722,7 +160717,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM33CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM33CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160761,7 +160756,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM34CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM34CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160800,7 +160795,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM35CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM35CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160839,7 +160834,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM36CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM36CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160878,7 +160873,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM37CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM37CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160917,7 +160912,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM38CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM38CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160956,7 +160951,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM39CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM39CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -160995,7 +160990,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM40CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM40CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161034,7 +161029,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM41CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM41CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161073,7 +161068,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM42CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM42CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161112,7 +161107,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM43CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM43CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161151,7 +161146,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM44CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM44CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161190,7 +161185,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM45CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM45CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161229,7 +161224,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM46CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM46CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161268,7 +161263,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM47CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM47CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161307,7 +161302,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM48CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM48CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161346,7 +161341,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM49CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM49CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161385,7 +161380,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM50CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM50CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161424,7 +161419,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM51CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM51CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161463,7 +161458,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM52CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM52CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161502,7 +161497,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM53CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM53CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161541,7 +161536,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM54CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM54CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161580,7 +161575,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM55CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM55CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161619,7 +161614,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM56CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM56CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161658,7 +161653,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM57CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM57CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161697,7 +161692,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM58CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM58CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161736,7 +161731,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM59CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM59CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161775,7 +161770,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM60CRU": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM60CRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -161948,7 +161943,7 @@
         "Szene_017__moveButton__DustyDustTouchAnimDDE": {
           "id": "Szene_017__moveButton__DustyDustTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -161982,7 +161977,7 @@
         "Szene_017__moveButtonDustyBranchesTouchAnimDDE": {
           "id": "Szene_017__moveButtonDustyBranchesTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162016,7 +162011,7 @@
         "Szene_017__moveButtonDustyClockTouchAnimDDE": {
           "id": "Szene_017__moveButtonDustyClockTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162055,7 +162050,7 @@
         "Szene_017__moveButtonDustyDetailTouchAnimDDE": {
           "id": "Szene_017__moveButtonDustyDetailTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162099,7 +162094,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM0DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM0DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162143,7 +162138,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM1DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM1DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162192,7 +162187,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM2DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM2DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162241,7 +162236,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM3DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM3DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162290,7 +162285,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM4DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM4DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162344,7 +162339,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM5DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM5DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162403,7 +162398,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM6DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM6DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162457,7 +162452,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM7DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM7DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162516,7 +162511,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM8DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM8DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162570,7 +162565,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM9DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM9DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162629,7 +162624,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM10DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM10DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162683,7 +162678,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM11DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM11DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162737,7 +162732,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM12DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM12DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162796,7 +162791,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM13DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM13DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162845,7 +162840,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM14DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM14DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162884,7 +162879,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM15DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM15DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162923,7 +162918,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM16DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM16DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -162962,7 +162957,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM17DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM17DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163001,7 +162996,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM18DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM18DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163040,7 +163035,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM19DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM19DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163079,7 +163074,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM20DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM20DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163118,7 +163113,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM21DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM21DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163157,7 +163152,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM22DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM22DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163196,7 +163191,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM23DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM23DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163235,7 +163230,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM24DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM24DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163274,7 +163269,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM25DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM25DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163313,7 +163308,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM26DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM26DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163352,7 +163347,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM27DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM27DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163391,7 +163386,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM28DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM28DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163430,7 +163425,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM29DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM29DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163469,7 +163464,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM30DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM30DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163508,7 +163503,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM31DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM31DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163547,7 +163542,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM32DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM32DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163586,7 +163581,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM33DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM33DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163625,7 +163620,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM34DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM34DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163664,7 +163659,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM35DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM35DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163703,7 +163698,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM36DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM36DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163742,7 +163737,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM37DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM37DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163781,7 +163776,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM38DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM38DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163820,7 +163815,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM39DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM39DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163859,7 +163854,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM40DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM40DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163898,7 +163893,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM41DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM41DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163937,7 +163932,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM42DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM42DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -163976,7 +163971,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM43DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM43DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164015,7 +164010,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM44DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM44DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164054,7 +164049,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM45DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM45DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164093,7 +164088,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM46DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM46DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164132,7 +164127,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM47DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM47DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164171,7 +164166,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM48DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM48DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164210,7 +164205,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM49DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM49DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164249,7 +164244,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM50DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM50DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164288,7 +164283,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM51DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM51DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164327,7 +164322,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM52DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM52DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164366,7 +164361,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM53DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM53DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164405,7 +164400,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM54DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM54DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164444,7 +164439,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM55DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM55DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164483,7 +164478,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM56DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM56DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164522,7 +164517,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM57DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM57DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164561,7 +164556,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM58DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM58DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164600,7 +164595,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM59DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM59DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -164639,7 +164634,7 @@
         "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM60DDE": {
           "id": "Szene_017__moveButtonMouseright01-1TouchAnim_SSFRM60DDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -168444,7 +168439,7 @@
         {
           "id": "Szene_018__LermontovAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -168538,7 +168533,7 @@
         {
           "id": "Szene_018__cheeseAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -168860,7 +168855,7 @@
         {
           "id": "Szene_018__yogaAnim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -170702,7 +170697,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM0",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -170806,7 +170801,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM1",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -170920,7 +170915,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM2",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -171034,7 +171029,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM3",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -171143,7 +171138,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM4",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -171252,7 +171247,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM5",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -171361,7 +171356,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM6",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -171470,7 +171465,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM7",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -171579,7 +171574,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM8",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -171688,7 +171683,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM9",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -171802,7 +171797,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM10",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -171916,7 +171911,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM11",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -172030,7 +172025,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM12",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -172139,7 +172134,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM13",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -172248,7 +172243,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM14",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -172357,7 +172352,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM15",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -172466,7 +172461,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM16",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -172575,7 +172570,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM17",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -172684,7 +172679,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM18",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -172798,7 +172793,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM19",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -172912,7 +172907,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM20",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -173021,7 +173016,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM21",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -173130,7 +173125,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM22",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -173239,7 +173234,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM23",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -173348,7 +173343,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM24",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -173457,7 +173452,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM25",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -173566,7 +173561,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM26",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -173675,7 +173670,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM27",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -173789,7 +173784,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM28",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -173903,7 +173898,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM29",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -174012,7 +174007,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM30",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -174121,7 +174116,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM31",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -174230,7 +174225,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM32",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -174339,7 +174334,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM33",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -174448,7 +174443,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM34",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -174557,7 +174552,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM35",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -174671,7 +174666,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM36",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -174785,7 +174780,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM37",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -174899,7 +174894,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM38",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175008,7 +175003,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM39",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175117,7 +175112,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM40",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175226,7 +175221,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM41",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175335,7 +175330,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM42",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175444,7 +175439,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM43",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175553,7 +175548,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM44",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175667,7 +175662,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM45",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175781,7 +175776,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM46",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175890,7 +175885,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM47",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -175999,7 +175994,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM48",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -176113,7 +176108,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM49",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -176227,7 +176222,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM50",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -176341,7 +176336,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM51",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -176455,7 +176450,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM52",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -176569,7 +176564,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM53",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -176683,7 +176678,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM54",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -176797,7 +176792,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM55",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -176911,7 +176906,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM56",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -177025,7 +177020,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM57",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -177134,7 +177129,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM58",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -177243,7 +177238,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM59",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -177357,7 +177352,7 @@
         {
           "id": "Szene_018__Mouseright01-1Anim_SSFRM60",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -185103,7 +185098,7 @@
         "Szene_019__CheeseButtonbLOCKLEFTButtonTouchAnimBEN": {
           "id": "Szene_019__CheeseButtonbLOCKLEFTButtonTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -185167,7 +185162,7 @@
         "Szene_019__CheeseButtoncheeseTouchAnimBEN": {
           "id": "Szene_019__CheeseButtoncheeseTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -185221,7 +185216,7 @@
         "Szene_019__CheeseButtoncheeseholesTouchAnimBEN": {
           "id": "Szene_019__CheeseButtoncheeseholesTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -185280,7 +185275,7 @@
         "Szene_019__CheeseButtoncheesetailsTouchAnimBEN": {
           "id": "Szene_019__CheeseButtoncheesetailsTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -185344,7 +185339,7 @@
         "Szene_019__CheeseButtonCheeseButtonTouchAnimSoundBEN": {
           "id": "Szene_019__CheeseButtonCheeseButtonTouchAnimSoundBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": []
         },
@@ -187640,7 +187635,7 @@
         "Szene_019__LermontovButtonbLOCKLEFTButtonTouchAnimBEN": {
           "id": "Szene_019__LermontovButtonbLOCKLEFTButtonTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -187704,7 +187699,7 @@
         "Szene_019__LermontovButtonLermontovTouchAnimBEN": {
           "id": "Szene_019__LermontovButtonLermontovTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -187773,7 +187768,7 @@
         "Szene_019__LermontovButtonLermontovButtonTouchAnimSoundBEN": {
           "id": "Szene_019__LermontovButtonLermontovButtonTouchAnimSoundBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": []
         },
@@ -188135,7 +188130,7 @@
         "Szene_019__YogaButtonbLOCKLEFTButtonTouchAnimBEN": {
           "id": "Szene_019__YogaButtonbLOCKLEFTButtonTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -188199,7 +188194,7 @@
         "Szene_019__YogaButtonyogaTouchAnimBEN": {
           "id": "Szene_019__YogaButtonyogaTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -188233,7 +188228,7 @@
         "Szene_019__YogaButtonyogaarrow1TouchAnimBEN": {
           "id": "Szene_019__YogaButtonyogaarrow1TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -188342,7 +188337,7 @@
         "Szene_019__YogaButtonyogaarrow2TouchAnimBEN": {
           "id": "Szene_019__YogaButtonyogaarrow2TouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -188451,7 +188446,7 @@
         "Szene_019__YogaButtonyogaarrowsTouchAnimBEN": {
           "id": "Szene_019__YogaButtonyogaarrowsTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -188565,7 +188560,7 @@
         "Szene_019__YogaButtonyogaeyesTouchAnimBEN": {
           "id": "Szene_019__YogaButtonyogaeyesTouchAnimBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": [
             {
@@ -188614,7 +188609,7 @@
         "Szene_019__YogaButtonYogaButtonTouchAnimSoundBEN": {
           "id": "Szene_019__YogaButtonYogaButtonTouchAnimSoundBEN",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "EN",
           "tracks": []
         },
@@ -192119,7 +192114,7 @@
         "Szene_019__CheeseButtonbLOCKLEFTButtonTouchAnimCRU": {
           "id": "Szene_019__CheeseButtonbLOCKLEFTButtonTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -192183,7 +192178,7 @@
         "Szene_019__CheeseButtoncheeseTouchAnimCRU": {
           "id": "Szene_019__CheeseButtoncheeseTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -192237,7 +192232,7 @@
         "Szene_019__CheeseButtoncheeseholesTouchAnimCRU": {
           "id": "Szene_019__CheeseButtoncheeseholesTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -192296,7 +192291,7 @@
         "Szene_019__CheeseButtoncheesetailsTouchAnimCRU": {
           "id": "Szene_019__CheeseButtoncheesetailsTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -192360,7 +192355,7 @@
         "Szene_019__CheeseButtonCheeseButtonTouchAnimSoundCRU": {
           "id": "Szene_019__CheeseButtonCheeseButtonTouchAnimSoundCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": []
         },
@@ -194656,7 +194651,7 @@
         "Szene_019__LermontovButtonbLOCKLEFTButtonTouchAnimCRU": {
           "id": "Szene_019__LermontovButtonbLOCKLEFTButtonTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -194720,7 +194715,7 @@
         "Szene_019__LermontovButtonLermontovTouchAnimCRU": {
           "id": "Szene_019__LermontovButtonLermontovTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -194789,7 +194784,7 @@
         "Szene_019__LermontovButtonLermontovButtonTouchAnimSoundCRU": {
           "id": "Szene_019__LermontovButtonLermontovButtonTouchAnimSoundCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": []
         },
@@ -195151,7 +195146,7 @@
         "Szene_019__YogaButtonbLOCKLEFTButtonTouchAnimCRU": {
           "id": "Szene_019__YogaButtonbLOCKLEFTButtonTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -195215,7 +195210,7 @@
         "Szene_019__YogaButtonyogaTouchAnimCRU": {
           "id": "Szene_019__YogaButtonyogaTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -195249,7 +195244,7 @@
         "Szene_019__YogaButtonyogaarrow1TouchAnimCRU": {
           "id": "Szene_019__YogaButtonyogaarrow1TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -195358,7 +195353,7 @@
         "Szene_019__YogaButtonyogaarrow2TouchAnimCRU": {
           "id": "Szene_019__YogaButtonyogaarrow2TouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -195467,7 +195462,7 @@
         "Szene_019__YogaButtonyogaarrowsTouchAnimCRU": {
           "id": "Szene_019__YogaButtonyogaarrowsTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -195581,7 +195576,7 @@
         "Szene_019__YogaButtonyogaeyesTouchAnimCRU": {
           "id": "Szene_019__YogaButtonyogaeyesTouchAnimCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": [
             {
@@ -195630,7 +195625,7 @@
         "Szene_019__YogaButtonYogaButtonTouchAnimSoundCRU": {
           "id": "Szene_019__YogaButtonYogaButtonTouchAnimSoundCRU",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "RU",
           "tracks": []
         },
@@ -199135,7 +199130,7 @@
         "Szene_019__CheeseButtonbLOCKLEFTButtonTouchAnimDDE": {
           "id": "Szene_019__CheeseButtonbLOCKLEFTButtonTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -199199,7 +199194,7 @@
         "Szene_019__CheeseButtoncheeseTouchAnimDDE": {
           "id": "Szene_019__CheeseButtoncheeseTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -199253,7 +199248,7 @@
         "Szene_019__CheeseButtoncheeseholesTouchAnimDDE": {
           "id": "Szene_019__CheeseButtoncheeseholesTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -199312,7 +199307,7 @@
         "Szene_019__CheeseButtoncheesetailsTouchAnimDDE": {
           "id": "Szene_019__CheeseButtoncheesetailsTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -199376,7 +199371,7 @@
         "Szene_019__CheeseButtonCheeseButtonTouchAnimSoundDDE": {
           "id": "Szene_019__CheeseButtonCheeseButtonTouchAnimSoundDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": []
         },
@@ -201672,7 +201667,7 @@
         "Szene_019__LermontovButtonbLOCKLEFTButtonTouchAnimDDE": {
           "id": "Szene_019__LermontovButtonbLOCKLEFTButtonTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -201736,7 +201731,7 @@
         "Szene_019__LermontovButtonLermontovTouchAnimDDE": {
           "id": "Szene_019__LermontovButtonLermontovTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -201805,7 +201800,7 @@
         "Szene_019__LermontovButtonLermontovButtonTouchAnimSoundDDE": {
           "id": "Szene_019__LermontovButtonLermontovButtonTouchAnimSoundDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": []
         },
@@ -202167,7 +202162,7 @@
         "Szene_019__YogaButtonbLOCKLEFTButtonTouchAnimDDE": {
           "id": "Szene_019__YogaButtonbLOCKLEFTButtonTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -202231,7 +202226,7 @@
         "Szene_019__YogaButtonyogaTouchAnimDDE": {
           "id": "Szene_019__YogaButtonyogaTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -202265,7 +202260,7 @@
         "Szene_019__YogaButtonyogaarrow1TouchAnimDDE": {
           "id": "Szene_019__YogaButtonyogaarrow1TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -202374,7 +202369,7 @@
         "Szene_019__YogaButtonyogaarrow2TouchAnimDDE": {
           "id": "Szene_019__YogaButtonyogaarrow2TouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -202483,7 +202478,7 @@
         "Szene_019__YogaButtonyogaarrowsTouchAnimDDE": {
           "id": "Szene_019__YogaButtonyogaarrowsTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -202597,7 +202592,7 @@
         "Szene_019__YogaButtonyogaeyesTouchAnimDDE": {
           "id": "Szene_019__YogaButtonyogaeyesTouchAnimDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": [
             {
@@ -202646,7 +202641,7 @@
         "Szene_019__YogaButtonYogaButtonTouchAnimSoundDDE": {
           "id": "Szene_019__YogaButtonYogaButtonTouchAnimSoundDDE",
           "type": "touch",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "DE",
           "tracks": []
         },
@@ -208468,7 +208463,7 @@
         {
           "id": "Szene_020__Town20_002Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -208552,7 +208547,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM0",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -208636,7 +208631,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM1",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -208725,7 +208720,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM2",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -208814,7 +208809,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM3",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -208908,7 +208903,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM4",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -208997,7 +208992,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM5",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209091,7 +209086,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM6",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209180,7 +209175,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM7",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209269,7 +209264,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM8",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209363,7 +209358,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM9",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209452,7 +209447,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM10",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209546,7 +209541,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM11",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209635,7 +209630,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM12",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209724,7 +209719,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM13",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209818,7 +209813,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM14",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -209907,7 +209902,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM15",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210001,7 +209996,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM16",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210090,7 +210085,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM17",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210179,7 +210174,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM18",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210273,7 +210268,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM19",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210362,7 +210357,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM20",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210456,7 +210451,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM21",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210545,7 +210540,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM22",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210634,7 +210629,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM23",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210723,7 +210718,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM24",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210812,7 +210807,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM25",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210906,7 +210901,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM26",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -210990,7 +210985,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM27",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211064,7 +211059,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM28",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211138,7 +211133,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM29",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211212,7 +211207,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM30",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211286,7 +211281,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM31",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211360,7 +211355,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM32",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211434,7 +211429,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM33",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211508,7 +211503,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM34",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211582,7 +211577,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM35",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211656,7 +211651,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM36",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211730,7 +211725,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM37",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211804,7 +211799,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM38",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211878,7 +211873,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM39",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -211952,7 +211947,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM40",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212026,7 +212021,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM41",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212100,7 +212095,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM42",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212174,7 +212169,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM43",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212248,7 +212243,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM44",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212322,7 +212317,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM45",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212396,7 +212391,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM46",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212470,7 +212465,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM47",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212544,7 +212539,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM48",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212618,7 +212613,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM49",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212692,7 +212687,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM50",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212766,7 +212761,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM51",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212840,7 +212835,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM52",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212914,7 +212909,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM53",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -212988,7 +212983,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM54",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -213062,7 +213057,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM55",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -213136,7 +213131,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM56",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -213210,7 +213205,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM57",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -213284,7 +213279,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM58",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -213358,7 +213353,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM59",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -213432,7 +213427,7 @@
         {
           "id": "Szene_020__Mouseright01-1Anim_SSFRM60",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
@@ -213704,7 +213699,7 @@
         {
           "id": "Szene_020__DustyCAT1Anim",
           "type": "start",
-          "repeat": 1,
+          "repeat": 0,
           "lang": "",
           "tracks": [
             {
