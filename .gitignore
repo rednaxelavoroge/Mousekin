@@ -1,11 +1,17 @@
-node_modules
-dist
-downloaded_docs
-assets
-*.png
-*.jpg
-!public/**
+# Dependencies & Build
+node_modules/
+dist/
+.vercel/
 
-.vercel
+# Heavy raw PSD files (>50MB, exceeds GitHub 100MB limit)
+времятранспорт/*.psd
+*.psd
+
+# System & Temporary
 .DS_Store
+*.log
+screenshot_*.png
+vercel_live_*.png
+extracted_preview/
+downloaded_docs/
 extracted_apk/

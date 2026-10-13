@@ -1,0 +1,366 @@
+/* ========================================================
+   Mousekin Clocktown — PWA & Multilingual Navigation Styles
+   (Preserves 100% of original Tilda watercolor art and layout)
+   ======================================================== */
+
+:root {
+  --mk-gold: #f4c442;
+  --mk-gold-bright: #ffe680;
+  --mk-amber: #d97706;
+  --mk-coral: #ff6b6b;
+  --mk-night: #0e1018;
+  --mk-night-trans: rgba(14, 16, 24, 0.88);
+  --mk-paper: #fcf6d6;
+  --mk-glow: rgba(244, 196, 66, 0.45);
+}
+
+/* Modal Install Dialog for Mobile / Desktop */
+.mk-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mk-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mk-modal-box {
+  background: #18151f;
+  border: 1px solid rgba(244, 196, 66, 0.35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(244, 196, 66, 0.15);
+  border-radius: 24px;
+  max-width: 460px;
+  width: 100%;
+  padding: 32px 28px;
+  box-sizing: border-box;
+  position: relative;
+  color: #fcf6d6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transform: scale(0.94) translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mk-modal-overlay.open .mk-modal-box {
+  transform: scale(1) translateY(0);
+}
+
+.mk-modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.mk-modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mk-modal-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.mk-modal-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 14px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(244, 196, 66, 0.3);
+}
+
+.mk-modal-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mk-modal-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffe680;
+  margin-bottom: 8px;
+}
+
+.mk-modal-desc {
+  font-size: 14px;
+  color: rgba(252, 246, 214, 0.75);
+  line-height: 1.45;
+}
+
+.mk-modal-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.mk-step-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 14px;
+  border-radius: 14px;
+}
+
+.mk-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--mk-gold);
+  color: #1a1202;
+  font-weight: 800;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mk-step-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #fcf6d6;
+}
+
+.mk-modal-btn-install {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffd447 0%, #f59e0b 100%);
+  color: #1a1202;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mk-modal-btn-install:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
+}
+
+/* Navigation Menu Bar & Language Switcher */
+.mk-menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 0 20px 0;
+  border-bottom: 1px solid rgba(163, 134, 6, 0.25);
+  margin-bottom: 20px;
+}
+
+.mk-menu-read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #a38606;
+  color: #fcf6d6 !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.mk-menu-read-btn:hover {
+  background: #c29d07;
+  transform: translateY(-1px);
+}
+
+.mk-menu-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(163, 134, 6, 0.12);
+  color: #8c6a08 !important;
+  border: 1px solid rgba(163, 134, 6, 0.35);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.mk-menu-home-btn:hover {
+  background: #a38606;
+  color: #fcf6d6 !important;
+  border-color: #a38606;
+  transform: translateY(-1px);
+}
+
+.mk-lang-switcher {
+  display: inline-flex;
+  gap: 4px;
+  background: rgba(163, 134, 6, 0.15);
+  padding: 4px;
+  border-radius: 18px;
+}
+
+.mk-lang-btn {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #a38606 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.mk-lang-btn.active {
+  background: #a38606;
+  color: #fcf6d6 !important;
+}
+
+.mk-lang-btn:hover:not(.active) {
+  background: rgba(163, 134, 6, 0.25);
+}
+
+/* Hero Typography Contrast: warm fairy-tale ink on watercolor cover */
+#rec11695452 .t001__title,
+#rec11695452 .t001__title div,
+#rec11695452 .t001__title strong,
+#rec12481256 .t001__title,
+#rec12481256 .t001__title div,
+#rec12481256 .t001__title strong {
+  color: #2b1d0c !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 248, 220, 0.95) !important;
+}
+
+#rec11695452 .t001__descr,
+#rec11695452 .t001__descr div,
+#rec11695452 .t001__descr strong,
+#rec12481256 .t001__descr,
+#rec12481256 .t001__descr div,
+#rec12481256 .t001__descr strong {
+  color: #26190a !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 16px rgba(255, 250, 225, 1), 0 0 32px rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.45 !important;
+}
+
+#rec11695452 .t635__typing-text,
+#rec12481256 .t635__typing-text {
+  color: #a38606 !important;
+}
+
+#rec11695452 .typed-cursor,
+#rec12481256 .typed-cursor {
+  color: #a38606 !important;
+}
+
+/* ========================================================
+   Improved Readability & Aesthetics for Menu Modal (.t280)
+   ======================================================== */
+.t280__menu__bg {
+  background-color: #faf7ed !important;
+  opacity: 0.96 !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+.t280__menu__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.t280__menu__item {
+  color: #3d2b12 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+  font-size: 21px !important;
+  line-height: 1.4 !important;
+  margin: 10px 0 !important;
+  padding: 8px 18px !important;
+  border-radius: 12px;
+  display: inline-block !important;
+  transition: all 0.2s ease !important;
+}
+
+.t280__menu__item:hover {
+  color: #925c04 !important;
+  background: rgba(163, 134, 6, 0.08) !important;
+  transform: translateY(-2px);
+}
+
+.t280__descr div {
+  color: #b83d12 !important;
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.t280 .t-sociallinks__item a svg path,
+.t280 .t-sociallinks__item a svg {
+  fill: #8f6805 !important;
+  transition: transform 0.2s, fill 0.2s;
+}
+
+.t280 .t-sociallinks__item a:hover svg path {
+  fill: #b58509 !important;
+}
+
+.t280 .t-sociallinks__item a:hover svg {
+  transform: scale(1.12);
+}
+
+/* Footer full 5 social links styling */
+.t452__right_social_links_wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+}
+
+.t452__right_social_links_item {
+  margin: 0 !important;
+}
+
+.t452__right_social_links_item a svg {
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.t452__right_social_links_item a:hover svg {
+  transform: scale(1.15);
+  fill: #ffd447 !important;
+}

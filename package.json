@@ -1,24 +1,8 @@
 {
   "name": "mousekin-clocktown",
-  "private": true,
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "canvas-confetti": "^1.9.4",
-    "lucide": "^0.468.0",
-    "three": "^0.170.0"
-  },
-  "devDependencies": {
-    "@capacitor/cli": "^8.5.2",
-    "@capacitor/core": "^8.5.2",
-    "@types/canvas-confetti": "^1.9.0",
-    "@types/three": "^0.170.0",
-    "typescript": "~5.6.3",
-    "vite": "^6.0.0"
+    "build": "cp -r time_transport_game dist/ && cp -r time_transport_game dist/transport"
   }
 }

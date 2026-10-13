@@ -1,44 +1,75 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "version": 2,
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/ru", "destination": "/index.html" },
+    { "source": "/en", "destination": "/en/index.html" },
+    { "source": "/de", "destination": "/de/index.html" },
+    { "source": "/clocktown", "destination": "/en/index.html" },
+    { "source": "/uhrenstadt", "destination": "/de/index.html" },
+
+    { "source": "/en/heroes", "destination": "/en/heroes.html" },
+    { "source": "/en/creators", "destination": "/en/creators.html" },
+    { "source": "/en/about_project", "destination": "/en/about_project.html" },
+    { "source": "/en/about", "destination": "/en/about_project.html" },
+    { "source": "/en/testimonials", "destination": "/en/testimonials.html" },
+    { "source": "/en/reviews", "destination": "/en/testimonials.html" },
+    { "source": "/en/privacy", "destination": "/en/privacy.html" },
+
+    { "source": "/de/heroes", "destination": "/de/heroes.html" },
+    { "source": "/de/creators", "destination": "/de/creators.html" },
+    { "source": "/de/about_project", "destination": "/de/about_project.html" },
+    { "source": "/de/about", "destination": "/de/about_project.html" },
+    { "source": "/de/testimonials", "destination": "/de/testimonials.html" },
+    { "source": "/de/reviews", "destination": "/de/testimonials.html" },
+    { "source": "/de/privacy", "destination": "/de/privacy.html" },
+
+    { "source": "/heroes", "destination": "/heroes.html" },
+    { "source": "/creators", "destination": "/creators.html" },
+    { "source": "/about_project", "destination": "/about_project.html" },
+    { "source": "/testimonials", "destination": "/testimonials.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/cheese", "destination": "/cheese.html" },
+    { "source": "/receipts", "destination": "/receipts.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+
+    { "source": "/read", "destination": "/app/index.html" },
+    { "source": "/play", "destination": "/app/index.html" },
+    { "source": "/book", "destination": "/app/index.html" },
+    { "source": "/transport", "destination": "/time_transport_game/index.html" },
+    { "source": "/transport/", "destination": "/time_transport_game/index.html" },
+    { "source": "/transport/(.*)", "destination": "/time_transport_game/$1" },
+    { "source": "/vremyatransport", "destination": "/time_transport_game/index.html" },
+    { "source": "/game", "destination": "/time_transport_game/index.html" }
+  ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/app/sw.js",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        }
+        { "key": "Service-Worker-Allowed", "value": "/app/" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
     },
     {
       "source": "/sw.js",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
+        { "key": "Service-Worker-Allowed", "value": "/" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "/(.*)\\.(mp3|m4a|ogg|wav)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Accept-Ranges", "value": "bytes" },
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/(.*)\\.(webp|png|jpg|jpeg|svg|gif|woff2|woff|ttf)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     }
   ]
 }

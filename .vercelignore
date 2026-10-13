@@ -1,0 +1,12 @@
+# Vercel Ignore File
+# Ignore heavy raw source PSD files
+времятранспорт/
+*.psd
+extracted_preview/
+.DS_Store
+.git
+.github
+*.log
+screenshot_*.png
+time_transport_game/assets/tests_composite/
+dist/**/tests_composite/
