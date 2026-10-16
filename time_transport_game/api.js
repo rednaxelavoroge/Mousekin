@@ -38,14 +38,16 @@ class TimeTransportAPI {
 
   markAssembled(vehicleId) {
     const p = this.getProgress();
-    if (!p.assembled.includes(vehicleId)) {
+    const first = !p.assembled.includes(vehicleId);
+    if (first) {
       p.assembled.push(vehicleId);
       p.lastPlayed = vehicleId;
       p.stars += 1;
       this.saveProgress(p);
       this.emit('transport_assembled', { vehicleId, progress: p });
-      this.notifyParent({ type: 'TIME_TRANSPORT_ASSEMBLED', vehicleId, progress: p });
     }
+    // книга должна узнать о завершении и при повторной сборке: после каждой игры — задание
+    this.notifyParent({ type: 'TIME_TRANSPORT_ASSEMBLED', vehicleId, progress: p, repeat: !first });
   }
 
   on(event, handler) {
